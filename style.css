@@ -5,7 +5,38 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+a{
+    text-decoration: none;
+}
+nav {
+    text-align: center;
+}
+nav a {
+    color: black;
+    display: block;
+}
+nav > ul {
+    display: grid;
+    grid-auto-flow: column;
+    list-style-type: none;
+    justify-content: center;
+    grid-column-gap: 2vw;
+    align-items: center;
+}
+nav > ul > li {
+    font-size: 22px;
+    padding: 5px;
+    background-size: ;
+}
+nav li :hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
 main > h1{
+    margin-top: 50px;
     padding: 26px;
     text-align: center;
+}
+main > .name-header{
+    text-align: center;
+    font-size: 28px;
 }
