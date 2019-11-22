@@ -1,7 +1,7 @@
 window.onscroll = function() {OnScroll()};
 
 function OnScroll() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     document.getElementById("navbar").className = "scrolled";
     document.getElementById("navbarUl").className = "scrolled-ul";
   }
