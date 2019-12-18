@@ -1,0 +1,31 @@
+@media only screen and (max-width: 1100px) {
+  nav {
+    background-color: black;
+    ul {
+      display: none;
+      grid-auto-flow: row;
+      position: absolute;
+      width: 100%;
+      li {
+        a{
+          color: white;
+        }
+      }
+    }
+    .mobile{
+      display: block;
+    }
+    .open {
+      display: block;
+      background-color: rgba($color: #000000, $alpha: 0.9);
+      margin-top: $navHeight;
+    }
+  }
+  main {
+    .main-name,
+    .main-header {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}

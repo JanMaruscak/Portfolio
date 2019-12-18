@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
@@ -16,26 +16,45 @@
     <title>Projects</title>
   </head>
   <body>
-    <nav>
-      <ul>
+    <nav id="navbar">
+      <ul id="navbarUl">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./contact.html">Contact</a></li>
       </ul>
+      
+      <img src="../icons/bars.svg" alt="bars" class="mobile" onclick="ToggleMobile()">
+      <!-- <span class="fas fa-bars fa-2x mobile" onclick="ToggleMobile()"></span> -->
     </nav>
     <main>
-      <h1>Jan Maruščák</h1>
-      <p class="name-header">Neco</p>
-      <img src="" alt="portrait" />
+      <h1>My projects</h1>
       <div class="project-table">
+
         <div class="project">
-          <h3>
-              Penis
-          </h3>
-          <div class="container"></div>
+          <h2>
+            Penis
+          </h2>
+          <div class="container">
+            <img src="https://blog.inpage.cz/obrazek/3/kitten-jpg/" alt="" />
+          </div>
         </div>
+        <div class="project">
+            <h2>
+              Penis
+            </h2>
+            <div class="container">
+              <img src="https://blog.inpage.cz/obrazek/3/kitten-jpg/" alt="" />
+            </div>
+            <div class="project">
+                <h2>
+                  Penis
+                </h2>
+                <div class="container">
+                  <img src="https://blog.inpage.cz/obrazek/3/kitten-jpg/" alt="" />
+                </div>
       </div>
     </main>
     <footer></footer>
   </body>
+  <script src="../script.js"></script>
 </html>
