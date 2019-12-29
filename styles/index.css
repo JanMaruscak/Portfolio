@@ -490,4 +490,30 @@ main .about h2 {
     margin-left: 0;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  main .project-table {
+    width: 100%;
+  }
+  main .project-table .project {
+    width: 75%;
+    height: 500px;
+  }
+  main .project-table .project .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .project-table .project .container .left {
+    width: 100%;
+  }
+  main .project-table .project .container .right {
+    margin-top: 20px;
+    width: 100%;
+  }
+  main .project-table .project .container .right img {
+    height: 210px;
+  }
+}
 /*# sourceMappingURL=index.css.map */
