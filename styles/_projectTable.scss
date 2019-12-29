@@ -31,24 +31,6 @@
           font-size: 16px;
           text-align: left;
         }
-        .repository{
-            background-color: #3498db;
-            color: white;
-            padding: 5px 10px;
-            position: absolute;
-            left: 0;
-            bottom: 35px;
-            transition: 0.25s all ease-in-out;
-            &:hover{
-                transform: translateY(-2px);
-                box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
-            }
-        }
-        .tags {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-        }
       }
       .right {
         width: 40%;
@@ -57,6 +39,24 @@
           vertical-align: middle;
           height: 100%;
           padding: 5px;
+        }
+        .repository {
+          background-color: #3498db;
+          color: white;
+          padding: 5px 10px;
+          position: absolute;
+          left: 0;
+          bottom: 35px;
+          transition: 0.25s all ease-in-out;
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+          }
+        }
+        .tags {
+          position: absolute;
+          bottom: 0;
+          left: 0;
         }
       }
     }
