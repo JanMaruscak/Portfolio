@@ -49,6 +49,7 @@ nav ul li a {
 
 nav ul .selected {
   font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(150, 150, 150, 0.5);
 }
 
 nav .hamburger-container {
@@ -153,6 +154,85 @@ footer .link p {
   display: none;
 }
 
+.project-table {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.project-table .project {
+  width: 650px;
+  height: 225px;
+  margin: 20px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+.project-table .project .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  position: relative;
+}
+
+.project-table .project .container .left {
+  width: 60%;
+}
+
+.project-table .project .container .left h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: left;
+}
+
+.project-table .project .container .left p {
+  font-size: 16px;
+  text-align: left;
+}
+
+.project-table .project .container .left .repository {
+  background-color: #3498db;
+  color: white;
+  padding: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 35px;
+  -webkit-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+
+.project-table .project .container .left .repository:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.project-table .project .container .left .tags {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.project-table .project .container .right {
+  width: 40%;
+}
+
+.project-table .project .container .right img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  padding: 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -198,6 +278,7 @@ main .main-name {
   -webkit-animation: entrance-name 1s ease-out;
           animation: entrance-name 1s ease-out;
   padding: 26px;
+  margin-top: 0;
 }
 
 main .main-header {
@@ -225,6 +306,20 @@ main .chevron {
   bottom: 60px;
   -webkit-animation: pulse 2s infinite;
           animation: pulse 2s infinite;
+}
+
+main h1 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+main .about {
+  max-width: 600px;
+  margin: auto;
+}
+
+main .about h2 {
+  margin-bottom: 15px;
 }
 
 @-webkit-keyframes pulse {

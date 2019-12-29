@@ -1,12 +1,14 @@
 @import "./variables";
 @import "./nav";
 @import "./footer";
+@import "./projectTable";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -18,7 +20,6 @@ a {
   text-decoration: none;
   color: black;
 }
-
 main {
   .landing {
     height: 100vh;
@@ -32,6 +33,7 @@ main {
     white-space: nowrap;
     animation: entrance-name 1s ease-out;
     padding: 26px;
+    margin-top: 0;
   }
   .main-header {
     text-align: center;
@@ -48,12 +50,23 @@ main {
     margin-left: auto;
     margin-right: auto;
   }
-  .chevron{
+  .chevron {
     width: 50px;
     position: absolute;
     left: 50%;
     bottom: 60px;
     animation: pulse 2s infinite;
+  }
+  h1 {
+    margin-top: $navHeight * 2;
+    text-align: center;
+  }
+  .about {
+    max-width: 600px;
+    margin: auto;
+    h2 {
+      margin-bottom: 15px;
+    }
   }
 }
 
