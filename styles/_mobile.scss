@@ -3,10 +3,13 @@
     background-color: black;
     ul {
       display: none;
-      grid-auto-flow: row;
+      flex-direction: row;
       position: absolute;
       width: 100%;
       li {
+        &:first-child{
+          margin-left: 0;
+        }
         a{
           color: white;
         }

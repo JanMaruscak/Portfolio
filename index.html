@@ -16,17 +16,13 @@
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/11f645e28d.js"
-      crossorigin="anonymous"
-    ></script>
     <title>Portfolio</title>
   </head>
 
   <body>
     <nav id="navbar">
       <ul id="navbarUl">
-        <li><a href="index.html">Home</a></li>
+        <li class="selected"><a href="index.html">Home</a></li>
         <li><a href="pages/projects.html">Projects</a></li>
         <li><a href="pages/contact.html">Contact</a></li>
       </ul>
@@ -37,96 +33,48 @@
           <div></div>
         </div>
       </div>
-      <!-- <img
-        src="./icons/bars.svg"
-        alt="bars"
-        class="mobile"
-        onclick="ToggleMobile()"
-      /> -->
-      <!-- <span class="fas fa-bars fa-2x mobile" onclick="ToggleMobile()"></span> -->
     </nav>
     <main>
-      <h1 class="main-name">Jan Maruščák</h1>
-      <img
-        class="main-portrait"
-        src="https://blog.inpage.cz/obrazek/3/kitten-jpg/"
-        alt="kocicka"
-      />
-      <p class="main-header">Nejvetsi borec</p>
-      <div class="about">
+      <div class="landing">
+        <h1 class="main-name">Jan Maruscak</h1>
+        <img
+          class="main-portrait"
+          src="icons/developer.svg"
+          alt="developer icon"
+        />
+        <p class="main-header">Lorem developer</p>
+        <a href="#about">
+          <img class="chevron" src="./icons/chevron-down.svg" alt="chevron down"
+        /></a>
+      </div>
+
+      <div class="about" id="about">
         <h2>About me</h2>
         <p>
-          I'm 16 year old developer who is the best in being cringe.<br />I know
-          C#, HTML, CSS, JavaScript, React.<br />Markoš mi dal 2. Posral jsem
-          fyziku.I'm 16 year old developer who is the best in being cringe.<br />I
-          know C#, HTML, CSS, JavaScript, React.<br />Markoš mi dal 2. Posral
-          jsem fyziku.I'm 16 year old developer who is the best in being
-          cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš mi
-          dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best in
-          being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.I'm 16 year old developer who is the best
-          in being cringe.<br />I know C#, HTML, CSS, JavaScript, React.<br />Markoš
-          mi dal 2. Posral jsem fyziku.
+          I'm 16 year old developer who is the best in being cringe. I someh
         </p>
-        <p class="show-on-scroll">dfdfdf</p>
       </div>
-      <!-- <span class="fas fa-chevron-down"></span> -->
     </main>
     <footer>
       <div class="links">
         <div class="link">
           <a href="https://github.com/JanMaruscak">
-            <span class="fab fa-github fa-3x" onclick=""></span>
+            <img src="./icons/github-brands.svg" alt="github logo" />
           </a>
           <p>Github</p>
         </div>
         <div class="link">
           <a href="https://github.com/JanMaruscak">
-            <span class="fab fa-linkedin fa-3x"></span>
+            <img src="./icons/linkedin-brands.svg" alt="linkedin logo" />
           </a>
           <p>LinkedIn</p>
         </div>
         <div class="link">
-          <a href="https://github.com/JanMaruscak">
-            <span class="fab fa-twitter fa-3x"></span>
+          <a href="https://twitter.com">
+            <img src="./icons/twitter.svg" alt="twitter logo" />
           </a>
           <p>Twitter</p>
         </div>
-        <!-- <button class="fab fa-twitter fa-2x" style="
-            background-color: Transparent;
-            background-repeat:no-repeat;
-            border: none;
-            cursor:pointer;
-            overflow: hidden;
-            outline:none;;"></button> -->
       </div>
     </footer>
   </body>

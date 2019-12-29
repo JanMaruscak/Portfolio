@@ -9,22 +9,22 @@
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/11f645e28d.js"
-      crossorigin="anonymous"
-    ></script>
     <title>Projects</title>
   </head>
-  <body>
+  <body>    
     <nav id="navbar">
       <ul id="navbarUl">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li class="selected"><a href="../index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      
-      <img src="../icons/bars.svg" alt="bars" class="mobile" onclick="ToggleMobile()">
-      <!-- <span class="fas fa-bars fa-2x mobile" onclick="ToggleMobile()"></span> -->
+      <div class="hamburger-container">
+        <div class="hamburger" onclick="ToggleMobile()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </nav>
     <main>
       <h1>My projects</h1>
@@ -55,6 +55,5 @@
       </div>
     </main>
     <footer></footer>
-  </body>
-  <script src="../script.js"></script>
+  </body>  <script src="../script.js"></script>
 </html>

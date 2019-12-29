@@ -1,0 +1,38 @@
+footer {
+    padding-bottom: 30px;
+    .links {
+      margin-top: 35px;
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: 20px;
+      justify-content: center;
+      min-height: 100px;
+    }
+    .link {
+      a {
+        img {
+          color: gray;
+          transition: all 0.25s;
+          width: 50px;
+          &:hover {
+            color: black;
+            transform: scale(1.25);
+          }
+        }
+        &:hover {
+          ~ p {
+            display: block;
+            position: absolute;
+            /* left: 50%;*/
+            transform: translate(-25%, 0);
+          }
+        }
+      }
+      p {
+        margin-top: 5px;
+        font-size: 24px;
+        display: none;
+      }
+    }
+  }
+  

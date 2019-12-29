@@ -34,7 +34,7 @@ function isElementInViewport(el) {
 }
 
 function OnScroll() {
-  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     // document.getElementById("navbar").className = "scrolled";
     document.getElementById("navbar").classList.add("scrolled");
     document.getElementById("navbarUl").classList.add("scrolled-ul");
@@ -50,3 +50,24 @@ function OnScroll() {
 function ToggleMobile(){
   document.getElementById('navbarUl').classList.toggle('open');
 }
+
+
+
+
+
+
+// $(document).ready(function () {
+//   var $horizontal = $('.horizontal');
+//   var startPosition = $horizontal.position().left;
+//   var startTop = $horizontal.position().top;
+//   var speed = 200;
+//   $(window).scroll(function () {
+//       var st = $(this).scrollTop();
+//       var newPos = (st * (speed/100)) + startPosition;
+//       var newTop = startTop - st / 2
+//       $horizontal.css({
+//           'left': newPos,
+//           'top': newTop
+//       });
+//   });
+// });
