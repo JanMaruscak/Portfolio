@@ -201,7 +201,7 @@ footer .link p {
 .project-table .project .container .left .repository {
   background-color: #3498db;
   color: white;
-  padding: 5px;
+  padding: 5px 10px;
   position: absolute;
   left: 0;
   bottom: 35px;
@@ -299,13 +299,24 @@ main .main-portrait {
   margin-right: auto;
 }
 
-main .chevron {
+main .chevron-container {
   width: 50px;
-  position: absolute;
-  left: 50%;
   bottom: 60px;
+  left: 50%;
+  position: absolute;
   -webkit-animation: pulse 2s infinite;
           animation: pulse 2s infinite;
+  text-align: center;
+}
+
+main .chevron-container a {
+  display: inline-block;
+}
+
+main .chevron-container .chevron {
+  width: 100%;
+  position: relative;
+  left: -50%;
 }
 
 main h1 {
@@ -453,7 +464,7 @@ main .about h2 {
             flex-direction: row;
     width: 100%;
     position: absolute;
-    height: 100vh;
+    height: calc(100vh - 50px);
   }
   nav ul li {
     margin-left: 0;
@@ -507,6 +518,26 @@ main .about h2 {
   }
   main .project-table .project .container .left {
     width: 100%;
+  }
+  main .project-table .project .container .left h3 {
+    text-align: center;
+  }
+  main .project-table .project .container .left p {
+    text-align: center;
+  }
+  main .project-table .project .container .left .repository {
+    left: 0;
+    right: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 50px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  main .project-table .project .container .left .tags {
+    left: 0;
+    right: 0;
+    text-align: center;
   }
   main .project-table .project .container .right {
     margin-top: 20px;
