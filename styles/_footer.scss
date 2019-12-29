@@ -10,14 +10,28 @@ footer {
     }
     .link {
       a {
-        img {
-          color: gray;
+        svg {
           transition: all 0.25s;
           width: 50px;
+          fill: rgba($color: #000000, $alpha: 0.75);
           &:hover {
-            color: black;
             transform: scale(1.25);
           }
+        }
+        #twitter{
+            &:hover{
+                fill: #1da1f2;
+            }
+        }
+        #github{
+            &:hover{
+                fill: #171515;
+            }
+        }
+        #linkedin{
+            &:hover{
+                fill: #0a66c2;
+            }
         }
         &:hover {
           ~ p {
