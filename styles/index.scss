@@ -3,11 +3,13 @@
 @import "./footer";
 @import "./projectTable";
 @import "./loading";
+@import "./contact";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -20,10 +22,11 @@ body {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: $darkBlack;
 }
 main {
   min-height: calc(100vh - #{$navHeight} - #{$footerHeight} - #{footerMarginTop});
+  color: $darkBlack;
   .landing {
     height: 100vh;
     display: flex;
@@ -34,9 +37,12 @@ main {
   .main-name {
     margin-right: 300px;
     white-space: nowrap;
-    animation: entrance-name 1s ease-out;
     padding: 26px;
     margin-top: 0;
+    margin-bottom: 0;
+    &.animation{
+      animation: entrance-name 1s ease-out;
+    }
   }
   .main-header {
     text-align: center;
@@ -44,7 +50,9 @@ main {
     margin-left: 300px;
     padding: 26px;
     white-space: nowrap;
-    animation: entrance-header 1s ease-out;
+    &.animation{
+      animation: entrance-header 1s ease-out;
+    }
     /* animation-delay: 0.25s; */
   }
   .main-portrait {

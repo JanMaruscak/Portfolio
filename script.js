@@ -1,15 +1,19 @@
-window.onscroll = function() {OnScroll()};
-var scroll = window.requestAnimationFrame ||
-             function(callback){ window.setTimeout(callback, 1000/60)};
-var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
+window.onscroll = function() {
+  OnScroll();
+};
+var scroll =
+  window.requestAnimationFrame ||
+  function(callback) {
+    window.setTimeout(callback, 1000 / 60);
+  };
+var elementsToShow = document.querySelectorAll(".show-on-scroll");
 
 function loop() {
-
-  elementsToShow.forEach(function (element) {
+  elementsToShow.forEach(function(element) {
     if (isElementInViewport(element)) {
-      element.classList.add('visible');
+      element.classList.add("visible");
     } else {
-      element.classList.remove('visible');
+      element.classList.remove("visible");
     }
   });
 
@@ -22,14 +26,14 @@ function loop() {
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
   return (
-    (rect.top <= 0
-      && rect.bottom >= 0)
-    ||
-    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-    ||
+    (rect.top <= 0 && rect.bottom >= 0) ||
+    (rect.bottom >=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <=
+        (window.innerHeight || document.documentElement.clientHeight)) ||
     (rect.top >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight))
   );
 }
 
@@ -38,23 +42,17 @@ function OnScroll() {
     // document.getElementById("navbar").className = "scrolled";
     document.getElementById("navbar").classList.add("scrolled");
     document.getElementById("navbarUl").classList.add("scrolled-ul");
-  }
-  else{
-    // document.getElementById("navbar").className = "";    
+  } else {
+    // document.getElementById("navbar").className = "";
     document.getElementById("navbar").classList.remove("scrolled");
     document.getElementById("navbarUl").classList.remove("scrolled-ul");
     // document.getElementById("navbarUl").className = "";
   }
 }
 
-function ToggleMobile(){
-  document.getElementById('navbarUl').classList.toggle('open');
+function ToggleMobile() {
+  document.getElementById("navbarUl").classList.toggle("open");
 }
-
-
-
-
-
 
 // $(document).ready(function () {
 //   var $horizontal = $('.horizontal');
@@ -72,10 +70,9 @@ function ToggleMobile(){
 //   });
 // });
 
-
 function onReady(callback) {
   var intervalId = window.setInterval(function() {
-    if (document.getElementsByTagName('body')[0] !== undefined) {
+    if (document.getElementsByTagName("body")[0] !== undefined) {
       window.clearInterval(intervalId);
       callback.call(this);
     }
@@ -83,11 +80,46 @@ function onReady(callback) {
 }
 
 function setVisible(selector, visible) {
-  document.querySelector(selector).style.display = visible ? 'block' : 'none';
+  document.querySelector(selector).style.display = visible ? "block" : "none";
 }
 
-onReady(function() {
-  setVisible('#loading', false);
-  document.documentElement.style.overflowY = "visible";
-  // document.body.style.overflow = "visible"
+// onReady(function() {
+//   setVisible('#loading', false);
+//   document.documentElement.style.overflowY = "visible";
+//   document.querySelectorAll('.animate').forEach( el => {
+//     el.classList.add("animation")
+//     el.classList.remove("animate")
+//   });
+//   // document.body.style.overflow = "visible"
+// });
+window.addEventListener("load", function() {
+  fadeOutEffect();
+  // document.getElementsByClassName("loader-wrapper")[0].classList.add("hide")
 });
+
+function fadeOutEffect() {
+  var fadeTarget = document.getElementById("loading");
+  var fadeTop = 0;
+  var fadeEffect = setInterval(function() {
+    if (!fadeTarget.style.opacity) {
+      fadeTarget.style.opacity = 1;
+      fadeTarget.style.top = fadeTop;
+    }
+    if (fadeTarget.style.opacity > 0) {
+      fadeTarget.style.opacity -= 0.035;
+      fadeTarget.style.top = fadeTop + "px";
+      fadeTop -= 20;
+      setInterval(() => {
+        fadeTarget.style.display = "none";
+      }, 600);
+      document.documentElement.style.overflowY = "visible";
+      document.querySelectorAll(".animate").forEach(el => {
+        el.classList.add("animation");
+        el.classList.remove("animate");
+      });
+      document.body.style.overflow = "visible";
+    } else {
+      clearInterval(fadeEffect);
+    }
+  }, 10);
+}

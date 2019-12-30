@@ -3,15 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website about me. You can find here my projects, bio, social links and much more."
+    />
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Projects,Work,Social,Links" />
+    <meta name="author" content="Jan Maruščák" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <title>Contact</title>
+    <title>Portfolio</title>
   </head>
   <body>
+    <div id="loading">
+      <p>Loading</p>
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
     <nav id="navbar">
       <ul id="navbarUl">
         <li><a href="../index.html">Home</a></li>
@@ -27,7 +43,65 @@
       </div>
     </nav>
     <main>
-      <h1>Contact me!</h1>
+      <h1>Feel free to contact me!</h1>
+      <form action="" id="message-form">
+        <h2>Send me a message here!</h2>
+        <label for="name">Name</label>
+        <div class="input">
+          <input
+            type="text"
+            id="name"
+            placeholder="John Anonymous"
+            required
+            minlength="2"
+          />
+          <svg viewBox="0 0 20 20" class="Icon">
+            <path d="M0 0 L10 10 L0 20"></path>
+          </svg>
+        </div>
+        <label for="email">Email</label>
+        <div class="input">
+          <input
+            type="email"
+            id="email"
+            placeholder="john.anonymous@example.com"
+            required
+            minlength="2"
+          />
+          <svg viewBox="0 0 20 20" class="Icon">
+            <path d="M0 0 L10 10 L0 20"></path>
+          </svg>
+        </div>
+        <label for="message">Your message</label>
+        <div class="input">
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+            placeholder="Your beautiful message goes here!"
+          ></textarea>
+          <svg viewBox="0 0 20 20" class="Icon">
+            <path d="M0 0 L10 10 L0 20"></path>
+          </svg>
+        </div>
+        <input type="submit" value="Send your message!" />
+      </form>
+      <div class="social">
+        <h2>Or follow me on my social media :)</h2>
+        <ul>
+          <li>
+            Facebook
+          </li>
+          <li>
+            Twitter
+          </li>
+          <li>
+            Instagram
+          </li>
+        </ul>
+      </div>
     </main>
     <footer>
       <div class="links">

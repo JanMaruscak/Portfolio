@@ -45,20 +45,30 @@
     </nav>
     <main>
       <div class="landing">
-        <h1 class="main-name">Jan Maruscak</h1>
+        <h1 class="main-name animate">Jan Maruscak</h1>
         <img
-          class="main-portrait"
+          class="main-portrait animate"
           src="icons/developer.svg"
           alt="developer icon"
         />
-        <p class="main-header">Lorem developer</p>
+        <p class="main-header animate">Lorem developer</p>
         <div class="chevron-container">
           <a href="#about">
-            <img
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="chevron-down"
               class="chevron"
-              src="./icons/chevron-down.svg"
-              alt="chevron down"
-          /></a>
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              ></path></svg
+          ></a>
         </div>
       </div>
 
@@ -66,7 +76,7 @@
         <h2>About me</h2>
         <p>
           I'm a 16 years old developer from Czech Republic.<br />
-          I like to build C# desktop and web apps.<br />
+          I like to build desktop apps with C# or web apps with JavaScript.<br />
           I also enjoy learning and coding algorithms although I'm not very good
           at them.<br />
           Aside of coding some of my other hobbies are watching unhealthy
@@ -86,13 +96,12 @@
     <footer>
       <div class="links">
         <div class="link">
-          <a href="https://github.com/JanMaruscak">
+          <a href="https://github.com/JanMaruscak" id="github">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="github"
-              id="github"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512"
@@ -105,13 +114,12 @@
           <p>Github</p>
         </div>
         <div class="link">
-          <a href="https://github.com/JanMaruscak">
+          <a href="https://github.com/JanMaruscak" id="linkedin">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="linkedin"
-              id="linkedin"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -124,13 +132,12 @@
           <p>LinkedIn</p>
         </div>
         <div class="link">
-          <a href="https://twitter.com">
+          <a href="https://twitter.com" id="twitter">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
               data-icon="twitter"
-              id="twitter"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"

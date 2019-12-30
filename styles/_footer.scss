@@ -1,53 +1,67 @@
 footer {
-    margin-top: $footerMarginTop;
-    height: $footerHeight;
-    .links {
-      margin-top: 35px;
-      display: grid;
-      grid-auto-flow: column;
-      grid-column-gap: 20px;
-      justify-content: center;
-      min-height: 100px;
-    }
-    .link {
-      a {
+  margin-top: $footerMarginTop;
+  height: $footerHeight;
+  .links {
+    margin-top: 35px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+    justify-content: center;
+    min-height: 100px;
+  }
+  .link {
+    a {
+      svg {
+        transition: all 0.25s;
+        width: 50px;
+        fill: rgba($color: $darkBlack, $alpha: 0.75);
+      }
+      &:hover {
         svg {
-          transition: all 0.25s;
-          width: 50px;
-          fill: rgba($color: #000000, $alpha: 0.75);
-          &:hover {
-            transform: scale(1.25);
-          }
+          transform: scale(1.25);
         }
-        #twitter{
-            &:hover{
-                fill: #1da1f2;
-            }
+        ~ p {
+          display: block;
+          position: absolute;
+          /* left: 50%;*/
+          transform: translate(-20%, 0);
         }
-        #github{
-            &:hover{
-                fill: #171515;
-            }
-        }
-        #linkedin{
-            &:hover{
-                fill: #0a66c2;
-            }
-        }
+      }
+      &#twitter {
         &:hover {
+          svg {
+            fill: #1da1f2;
+          }
           ~ p {
-            display: block;
-            position: absolute;
-            /* left: 50%;*/
-            transform: translate(-25%, 0);
+            color: #1da1f2;
           }
         }
       }
-      p {
-        margin-top: 5px;
-        font-size: 24px;
-        display: none;
+      &#github {
+        &:hover {
+          svg {
+            fill: #171515;
+          }
+          ~ p {
+            color: #171515;
+          }
+        }
       }
+      &#linkedin {
+        &:hover {
+          svg {
+            fill: #0a66c2;
+          }
+          ~ p {
+            color: #0a66c2;
+          }
+        }
+      }
+    }
+    p {
+      margin-top: 5px;
+      font-size: 24px;
+      display: none;
     }
   }
-  
+}

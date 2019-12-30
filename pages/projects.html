@@ -3,15 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website about me. You can find here my projects, bio, social links and much more."
+    />
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Projects,Work,Social,Links" />
+    <meta name="author" content="Jan Maruščák" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <title>Projects</title>
+    <title>Portfolio</title>
   </head>
   <body>
+    <div id="loading">
+      <p>Loading</p>
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
     <nav id="navbar">
       <ul id="navbarUl">
         <li><a href="../index.html">Home</a></li>
@@ -38,10 +54,8 @@
               </p>
             </div>
             <div class="right">
-              <img
-                src="https://i.imgur.com/IHRbjr8.png"
-                alt=""
-              /><a
+              <span class="helper"></span>
+              <img src="https://i.imgur.com/IHRbjr8.png" alt="" /><a
                 class="repository"
                 href="https://github.com/JanMaruscak/YouTube-Downloader"
                 >Visit repository</a
@@ -62,10 +76,9 @@
               </p>
             </div>
             <div class="right">
-              <img
-                src="https://i.imgur.com/BSZhm91.png"
-                alt=""
-              /><a
+              <span class="helper"></span>
+              <img src="https://i.imgur.com/BSZhm91.png" alt="" />
+              <a
                 class="repository"
                 href="https://github.com/JanMaruscak/learnit"
                 >Visit repository</a
