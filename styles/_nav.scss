@@ -5,6 +5,7 @@ nav {
   height: $navHeight;
   width: 100%;
   z-index: 100;
+  color: #2f3542;
   ul {
     display: flex;
     justify-content: center;
@@ -18,7 +19,7 @@ nav {
         margin-right: 30%;
       }
       &:hover {
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: rgba($color: #2f3542, $alpha: 0.05);
         //   font-weight: bold;
         p {
           display: block;
@@ -65,7 +66,7 @@ nav {
   }
 }
 .scrolled {
-    background-color: black;
+    background-color: $darkBlack;
     position: fixed;
     ul {
       li {

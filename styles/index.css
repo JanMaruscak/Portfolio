@@ -6,6 +6,7 @@ nav {
   height: 50px;
   width: 100%;
   z-index: 100;
+  color: #2f3542;
 }
 
 nav ul {
@@ -31,7 +32,7 @@ nav ul li:first-child {
 }
 
 nav ul li:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(47, 53, 66, 0.05);
 }
 
 nav ul li:hover p {
@@ -88,7 +89,7 @@ nav .mobile {
 }
 
 .scrolled {
-  background-color: black;
+  background-color: #2f3542;
   position: fixed;
 }
 
@@ -101,7 +102,8 @@ nav .mobile {
 }
 
 footer {
-  padding-bottom: 30px;
+  margin-top: 100px;
+  height: 200px;
 }
 
 footer .links {
@@ -169,6 +171,7 @@ footer .link p {
   -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
   display: inline-block;
+  background-color: white;
 }
 
 .project-table .project .container {
@@ -205,8 +208,11 @@ footer .link p {
 .project-table .project .container .right img {
   display: inline-block;
   vertical-align: middle;
-  height: 100%;
+  width: 100%;
   padding: 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .project-table .project .container .right .repository {
@@ -233,6 +239,144 @@ footer .link p {
   left: 0;
 }
 
+#loading {
+  z-index: 10000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2f3542;
+}
+
+#loading p {
+  color: white;
+  position: relative;
+  text-align: center;
+  left: 0;
+  right: 0;
+  font-size: 48px;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+          animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+          animation: lds-ellipsis3 0.6s infinite;
+}
+
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -243,6 +387,7 @@ footer .link p {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -253,6 +398,10 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+main {
+  min-height: calc(100vh - 50px - 200px - footerMarginTop);
 }
 
 main .landing {
@@ -322,14 +471,24 @@ main .chevron-container .chevron {
 main h1 {
   margin-top: 100px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 main .about {
   max-width: 600px;
-  margin: auto;
+  margin: 50px auto;
 }
 
 main .about h2 {
+  margin-bottom: 15px;
+}
+
+main .skills {
+  max-width: 600px;
+  margin: auto;
+}
+
+main .skills h2 {
   margin-bottom: 15px;
 }
 
@@ -453,7 +612,7 @@ main .about h2 {
 
 @media only screen and (max-width: 1100px) {
   nav {
-    background-color: black;
+    background-color: #2f3542;
     position: fixed;
   }
   nav ul {
@@ -492,7 +651,7 @@ main .about h2 {
   }
   nav .open {
     display: block;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(47, 53, 66, 0.9);
     margin-top: 50px;
   }
   main .main-name,
@@ -557,7 +716,7 @@ main .about h2 {
     line-height: 40px;
     font-size: 20px;
     min-width: 200px;
-    margin-top: 50px;
+    margin-top: 60px;
   }
   main .project-table .project .container .right .tags {
     position: relative;

@@ -1,5 +1,6 @@
 footer {
-    padding-bottom: 30px;
+    margin-top: $footerMarginTop;
+    height: $footerHeight;
     .links {
       margin-top: 35px;
       display: grid;
