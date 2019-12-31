@@ -49,6 +49,30 @@
       margin-left: 0;
     }
   }
+  .about-container {
+    .about {
+      text-align: center;
+      .header {
+        margin-left: auto !important;
+        margin-right: auto;
+      }
+      ul{
+        margin-left: auto !important;
+        margin-right: auto;
+      }
+    }
+    .skills {
+      text-align: center;
+      .header {
+        margin-left: auto !important;
+        margin-right: auto;
+      }
+      ul{
+        margin-left: auto !important;
+        margin-right: auto;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 800px) {
   main {

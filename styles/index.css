@@ -967,6 +967,28 @@ main .about-container .skills ul li {
     margin-right: 0;
     margin-left: 0;
   }
+  .about-container .about {
+    text-align: center;
+  }
+  .about-container .about .header {
+    margin-left: auto !important;
+    margin-right: auto;
+  }
+  .about-container .about ul {
+    margin-left: auto !important;
+    margin-right: auto;
+  }
+  .about-container .skills {
+    text-align: center;
+  }
+  .about-container .skills .header {
+    margin-left: auto !important;
+    margin-right: auto;
+  }
+  .about-container .skills ul {
+    margin-left: auto !important;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (max-width: 800px) {
