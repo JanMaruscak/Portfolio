@@ -61,6 +61,7 @@
       transition: all 0.2s;
       width: 5%;
       margin: auto;
+      margin-top: 2%;
       path {
         stroke: black;
         stroke-width: 2px;
@@ -79,6 +80,7 @@
       border: none;
       padding: 10px 15px;
       width: auto;
+      max-width: 90%;
       cursor: pointer;
       transition: all 0.25s ease-in-out;
       &:hover{
@@ -89,6 +91,7 @@
   }
   h2 {
     margin-right: 5%;
+    text-align: center;
   }
   textarea {
     letter-spacing: inherit;
@@ -142,4 +145,10 @@
     text-align: left;
     width: 95%;
   }
+}
+
+
+.social{
+  margin: auto;
+  width: 500px;
 }

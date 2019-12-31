@@ -25,7 +25,9 @@ a {
   color: $darkBlack;
 }
 main {
-  min-height: calc(100vh - #{$navHeight} - #{$footerHeight} - #{footerMarginTop});
+  min-height: calc(
+    100vh - #{$navHeight} - #{$footerHeight} - #{footerMarginTop}
+  );
   color: $darkBlack;
   .landing {
     height: 100vh;
@@ -33,6 +35,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: $navHeight;
   }
   .main-name {
     margin-right: 300px;
@@ -40,7 +43,7 @@ main {
     padding: 26px;
     margin-top: 0;
     margin-bottom: 0;
-    &.animation{
+    &.animation {
       animation: entrance-name 1s ease-out;
     }
   }
@@ -50,7 +53,7 @@ main {
     margin-left: 300px;
     padding: 26px;
     white-space: nowrap;
-    &.animation{
+    &.animation {
       animation: entrance-header 1s ease-out;
     }
     /* animation-delay: 0.25s; */
@@ -82,18 +85,92 @@ main {
     text-align: center;
     margin-bottom: 20px;
   }
-  .about {
-    max-width: 600px;
-    margin: 50px auto;
-    h2 {
-      margin-bottom: 15px;
+  .about-container {
+    .about {
+      // max-width: 600px;
+      // width: 40%;
+      // margin: 50px auto;
+      width: 100vw;
+      .header {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        width: auto;
+        margin-bottom: 25px;
+        margin-left: 15%;
+        h2 {
+          font-size: 78px;
+          display: inline-block;
+        }
+        .underline {
+          height: 2px;
+          background-color: #808080;
+          width: 50%;
+          display: inline-block;
+          position: relative;
+          transition: all 0.25s ease-in-out;
+        }
+        &:hover {
+          .underline {
+            width: 100%;
+          }
+        }
+      }
+      .pointer {
+        transition: all 0.2s;
+        path {
+          stroke: black;
+          stroke-width: 1px;
+          fill: none;
+        }
+      }
+      ul {
+        margin-left: 30%;
+        width: 50%;
+        font-size: 26px;
+        list-style-type: none;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+      margin-bottom: 100px;
     }
-  }
-  .skills {
-    max-width: 600px;
-    margin: auto;
-    h2 {
-      margin-bottom: 15px;
+    .skills {
+      width: 100vw;
+      .header {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        width: auto;
+        margin-bottom: 25px;
+        margin-left: 15%;
+        h2 {
+          font-size: 78px;
+          display: inline-block;
+        }
+        .underline {
+          height: 2px;
+          background-color: #808080;
+          width: 50%;
+          display: inline-block;
+          position: relative;
+          transition: all 0.25s ease-in-out;
+        }
+        &:hover {
+          .underline {
+            width: 100%;
+          }
+        }
+      }
+      ul {
+        list-style-type: none;
+        margin-left: 30%;
+        width: 50%;
+        font-size: 26px;
+        li {
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }

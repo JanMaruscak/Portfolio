@@ -32,8 +32,9 @@
     <nav id="navbar">
       <ul id="navbarUl">
         <li class="selected"><a href="index.html">Home</a></li>
-        <li><a href="pages/projects.html">Projects</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="./pages/projects.html">Projects</a></li>
+        <li><a href="./pages/resume.pdf">Resume</a></li>
+        <li><a href="./pages/contact.html">Contact</a></li>
       </ul>
       <div class="hamburger-container">
         <div class="hamburger" onclick="ToggleMobile()">
@@ -72,25 +73,43 @@
         </div>
       </div>
 
-      <div class="about" id="about">
-        <h2>About me</h2>
-        <p>
-          I'm a 16 years old developer from Czech Republic.<br />
-          I like to build desktop apps with C# or web apps with JavaScript.<br />
-          I also enjoy learning and coding algorithms although I'm not very good
-          at them.<br />
-          Aside of coding some of my other hobbies are watching unhealthy
-          amounts of TV shows and YouTube videos.
-        </p>
-      </div>
-      <div class="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>C#</li>
-          <li>HTML / CSS (Sass)</li>
-          <li>JavaScript + React</li>
-          <li>Jsem gay</li>
-        </ul>
+      <div class="about-container">
+        <div class="about" id="about">
+          <div class="header">
+            <h2>About</h2>
+            <span class="underline"></span>
+          </div>
+
+          <!-- <svg class="pointer">
+            <path d="M0,0 A50,50 0 1,1 100,100"></path>
+          </svg> -->
+
+          <ul>
+            <li>I'm a 16 years old developer from Czech Republic.</li>
+            <li>
+              I like to build desktop apps with C# or web apps with JavaScript.
+            </li>
+            <li>
+              I also enjoy learning and coding algorithms although I'm not very
+              good at them.
+            </li>
+            <li>
+              Aside of coding some of my other hobbies are watching unhealthy
+              amounts of TV shows and YouTube videos.
+            </li>
+          </ul>
+        </div>
+        <div class="skills">
+          <div class="header">
+            <h2>Skills</h2>
+            <span class="underline"></span>
+          </div>
+          <ul>
+            <li><b>Languages:</b> C#, JavaScript, HTML, CSS (Sass)</li>
+            <li><b>Frameworks:</b> React, Stýbr JS</li>
+            <li><b>Tools:</b> VS Code, Visual Studio, Adobe XD</li>
+          </ul>
+        </div>
       </div>
     </main>
     <footer>

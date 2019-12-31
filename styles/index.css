@@ -484,6 +484,7 @@ footer .link p {
   transition: all 0.2s;
   width: 5%;
   margin: auto;
+  margin-top: 2%;
 }
 
 #message-form .input .Icon path {
@@ -501,6 +502,7 @@ footer .link p {
   border: none;
   padding: 10px 15px;
   width: auto;
+  max-width: 90%;
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -515,6 +517,7 @@ footer .link p {
 
 #message-form h2 {
   margin-right: 5%;
+  text-align: center;
 }
 
 #message-form textarea {
@@ -575,6 +578,11 @@ footer .link p {
   width: 95%;
 }
 
+.social {
+  margin: auto;
+  width: 500px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -600,7 +608,7 @@ a {
 }
 
 main {
-  min-height: calc(100vh - 50px - 200px - footerMarginTop);
+  min-height: calc( 100vh - 50px - 200px - footerMarginTop);
   color: #2f3542;
 }
 
@@ -619,6 +627,7 @@ main .landing {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 50px;
 }
 
 main .main-name {
@@ -681,22 +690,102 @@ main h1 {
   margin-bottom: 20px;
 }
 
-main .about {
-  max-width: 600px;
-  margin: 50px auto;
+main .about-container .about {
+  width: 100vw;
+  margin-bottom: 100px;
 }
 
-main .about h2 {
-  margin-bottom: 15px;
+main .about-container .about .header {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  margin-bottom: 25px;
+  margin-left: 15%;
 }
 
-main .skills {
-  max-width: 600px;
-  margin: auto;
+main .about-container .about .header h2 {
+  font-size: 78px;
+  display: inline-block;
 }
 
-main .skills h2 {
-  margin-bottom: 15px;
+main .about-container .about .header .underline {
+  height: 2px;
+  background-color: #808080;
+  width: 50%;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+main .about-container .about .header:hover .underline {
+  width: 100%;
+}
+
+main .about-container .about .pointer {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+main .about-container .about .pointer path {
+  stroke: black;
+  stroke-width: 1px;
+  fill: none;
+}
+
+main .about-container .about ul {
+  margin-left: 30%;
+  width: 50%;
+  font-size: 26px;
+  list-style-type: none;
+}
+
+main .about-container .about ul li {
+  margin-bottom: 10px;
+}
+
+main .about-container .skills {
+  width: 100vw;
+}
+
+main .about-container .skills .header {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  margin-bottom: 25px;
+  margin-left: 15%;
+}
+
+main .about-container .skills .header h2 {
+  font-size: 78px;
+  display: inline-block;
+}
+
+main .about-container .skills .header .underline {
+  height: 2px;
+  background-color: #808080;
+  width: 50%;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+main .about-container .skills .header:hover .underline {
+  width: 100%;
+}
+
+main .about-container .skills ul {
+  list-style-type: none;
+  margin-left: 30%;
+  width: 50%;
+  font-size: 26px;
+}
+
+main .about-container .skills ul li {
+  margin-bottom: 10px;
 }
 
 @-webkit-keyframes pulse {
@@ -846,6 +935,7 @@ main .skills h2 {
   nav ul li a {
     color: white;
     width: 30%;
+    margin: auto;
   }
   nav .hamburger-container {
     display: -webkit-box;
@@ -861,9 +951,16 @@ main .skills h2 {
     display: block;
   }
   nav .open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-color: rgba(47, 53, 66, 0.9);
     margin-top: 50px;
+    padding-bottom: 50px;
   }
   main .main-name,
   main .main-header {
@@ -935,6 +1032,12 @@ main .skills h2 {
   }
   main .project-table .project .container .right .tags p {
     text-align: center;
+  }
+  main #message-form {
+    width: 80%;
+  }
+  main #message-form input[type="submit"] {
+    font-size: 1em;
   }
 }
 /*# sourceMappingURL=index.css.map */
