@@ -56,7 +56,7 @@
         margin-left: auto !important;
         margin-right: auto;
       }
-      ul{
+      ul {
         margin-left: auto !important;
         margin-right: auto;
       }
@@ -67,9 +67,16 @@
         margin-left: auto !important;
         margin-right: auto;
       }
-      ul{
+      ul {
         margin-left: auto !important;
         margin-right: auto;
+      }
+    }
+  }
+  .project-table {
+    .project {
+      &.read-more {
+        width: 100%;
       }
     }
   }
@@ -80,12 +87,12 @@
       width: 100%;
       .project {
         width: 75%;
-        height: 500px;
+        height: 600px;
         .container {
           flex-direction: column;
           .left {
             width: 100%;
-            height: 33%;
+            height: 25%;
             h3 {
               text-align: center;
             }
@@ -95,14 +102,19 @@
           }
           .right {
             width: 100%;
-            height: 66%;
+            height: 75%;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Centering y-axis */
-            align-items: center; /* Centering x-axis */
+            // justify-content: center; /* Centering y-axis */
+            // align-items: center; /* Centering x-axis */
+            align-items: center;
+            justify-content: flex-end;
             img {
-              height: auto;
-              width: 225px;
+              max-height: 60%;
+              max-width: 75%;
+            }
+            .helper{
+              display: none;
             }
             .read-more-button {
               position: relative;
@@ -114,14 +126,29 @@
               min-width: 200px;
               margin-top: 60px;
             }
+            .repository{
+              position: relative;
+              margin-left: auto;
+              margin-right: auto;
+              height: 50px;
+              left: 0;
+              line-height: 40px;
+              font-size: 20px;
+              min-width: 200px;
+              margin-top: 10px;
+              text-align:center;
+            }
             .tags {
               position: relative;
-              margin: auto;
+              margin-bottom: 5px;
               p {
                 text-align: center;
               }
             }
           }
+        }
+        &.read-more {
+          height: 800px;
         }
       }
     }

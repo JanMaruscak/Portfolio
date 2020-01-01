@@ -126,19 +126,22 @@ function fadeOutEffect() {
 
 function ReadMore(el) {
   let project = el.parentElement.parentElement.parentElement;
-  
-  project.parentElement.childNodes.forEach(element => {
+  let projects = project.parentElement.querySelectorAll(".project.read-more");
+  let isReadMore = project.classList.contains("read-more");
+  // console.log(projects)
+  projects.forEach(element => {
     if(element.classList !== null){
       element.classList.remove('read-more')
-
+      element.querySelectorAll(".read-more-button")[0].innerText = "Read more . . ."
     }
     // console.log(element)
   });
   
-  project.classList.toggle("read-more");
-  if (el.innerText  === "Read more . . .") {
+  if (!isReadMore) {
     el.innerText  = "Read less . . .";
+    project.classList.add("read-more");
   } else {
     el.innerText  = "Read more . . .";
+    project.classList.remove("read-more");
   }
 }

@@ -179,10 +179,23 @@ footer .link p {
   margin-right: auto;
   text-align: center;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .project-table .project {
-  width: 650px;
+  width: 800px;
   height: 250px;
   margin: 20px;
   padding: 20px;
@@ -190,8 +203,8 @@ footer .link p {
           box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
   display: inline-block;
   background-color: white;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .project-table .project .container {
@@ -265,6 +278,28 @@ footer .link p {
           box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
 }
 
+.project-table .project .container .right .repository {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  -webkit-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  position: absolute;
+  left: 150px;
+  bottom: 35px;
+  display: inline-block;
+}
+
+.project-table .project .container .right .repository:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
 .project-table .project .container .right .tags {
   position: absolute;
   bottom: 0;
@@ -276,9 +311,8 @@ footer .link p {
 }
 
 .project-table .project.read-more {
-  width: 100%;
+  width: 90%;
   height: 500px;
-  position: absolute;
   left: 0;
   z-index: 10;
   margin-left: 0;
@@ -1022,6 +1056,9 @@ main .about-container .skills ul li {
     margin-left: auto !important;
     margin-right: auto;
   }
+  .project-table .project.read-more {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1030,7 +1067,7 @@ main .about-container .skills ul li {
   }
   main .project-table .project {
     width: 75%;
-    height: 500px;
+    height: 600px;
   }
   main .project-table .project .container {
     -webkit-box-orient: vertical;
@@ -1040,7 +1077,7 @@ main .about-container .skills ul li {
   }
   main .project-table .project .container .left {
     width: 100%;
-    height: 33%;
+    height: 25%;
   }
   main .project-table .project .container .left h3 {
     text-align: center;
@@ -1050,7 +1087,7 @@ main .about-container .skills ul li {
   }
   main .project-table .project .container .right {
     width: 100%;
-    height: 66%;
+    height: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1058,18 +1095,19 @@ main .about-container .skills ul li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    /* Centering y-axis */
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    /* Centering x-axis */
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   main .project-table .project .container .right img {
-    height: auto;
-    width: 225px;
+    max-height: 60%;
+    max-width: 75%;
+  }
+  main .project-table .project .container .right .helper {
+    display: none;
   }
   main .project-table .project .container .right .read-more-button {
     position: relative;
@@ -1081,12 +1119,27 @@ main .about-container .skills ul li {
     min-width: 200px;
     margin-top: 60px;
   }
+  main .project-table .project .container .right .repository {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    left: 0;
+    line-height: 40px;
+    font-size: 20px;
+    min-width: 200px;
+    margin-top: 10px;
+    text-align: center;
+  }
   main .project-table .project .container .right .tags {
     position: relative;
-    margin: auto;
+    margin-bottom: 5px;
   }
   main .project-table .project .container .right .tags p {
     text-align: center;
+  }
+  main .project-table .project.read-more {
+    height: 800px;
   }
   main #message-form {
     width: 80%;
