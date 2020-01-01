@@ -1,6 +1,10 @@
 footer {
   margin-top: $footerMarginTop;
   height: $footerHeight;
+  h3{
+    font-size: 28px;
+    text-align: center;
+  }
   .links {
     margin-top: 35px;
     display: grid;

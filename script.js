@@ -123,3 +123,22 @@ function fadeOutEffect() {
     }
   }, 10);
 }
+
+function ReadMore(el) {
+  let project = el.parentElement.parentElement.parentElement;
+  
+  project.parentElement.childNodes.forEach(element => {
+    if(element.classList !== null){
+      element.classList.remove('read-more')
+
+    }
+    // console.log(element)
+  });
+  
+  project.classList.toggle("read-more");
+  if (el.innerText  === "Read more . . .") {
+    el.innerText  = "Read less . . .";
+  } else {
+    el.innerText  = "Read more . . .";
+  }
+}

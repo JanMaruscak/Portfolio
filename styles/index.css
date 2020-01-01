@@ -106,6 +106,11 @@ footer {
   height: 200px;
 }
 
+footer h3 {
+  font-size: 28px;
+  text-align: center;
+}
+
 footer .links {
   margin-top: 35px;
   display: -ms-grid;
@@ -173,6 +178,7 @@ footer .link p {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  position: relative;
 }
 
 .project-table .project {
@@ -184,6 +190,8 @@ footer .link p {
           box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
   display: inline-block;
   background-color: white;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .project-table .project .container {
@@ -232,9 +240,10 @@ footer .link p {
           box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.5);
   vertical-align: middle;
   max-width: 95%;
+  max-height: 95%;
 }
 
-.project-table .project .container .right .repository {
+.project-table .project .container .right .read-more-button {
   background-color: #3498db;
   color: white;
   padding: 5px 10px;
@@ -243,9 +252,13 @@ footer .link p {
   bottom: 35px;
   -webkit-transition: 0.25s all ease-in-out;
   transition: 0.25s all ease-in-out;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.project-table .project .container .right .repository:hover {
+.project-table .project .container .right .read-more-button:hover {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
   -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
@@ -256,6 +269,26 @@ footer .link p {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.project-table .project .read-more-only {
+  display: none;
+}
+
+.project-table .project.read-more {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-table .project.read-more .read-more-only {
+  display: block;
 }
 
 #loading {
@@ -692,7 +725,6 @@ main h1 {
 
 main .about-container .about {
   width: 100vw;
-  margin-bottom: 100px;
 }
 
 main .about-container .about .header {
@@ -747,6 +779,7 @@ main .about-container .about ul li {
 
 main .about-container .skills {
   width: 100vw;
+  margin-top: 100px;
 }
 
 main .about-container .skills .header {
@@ -1038,7 +1071,7 @@ main .about-container .skills ul li {
     height: auto;
     width: 225px;
   }
-  main .project-table .project .container .right .repository {
+  main .project-table .project .container .right .read-more-button {
     position: relative;
     margin-left: auto;
     margin-right: auto;
