@@ -50,26 +50,19 @@
     }
   }
   .about-container {
-    .about {
+    .info-section {
       text-align: center;
       .header {
         margin-left: auto !important;
         margin-right: auto;
       }
       ul {
+        text-align: left;
         margin-left: auto !important;
         margin-right: auto;
-      }
-    }
-    .skills {
-      text-align: center;
-      .header {
-        margin-left: auto !important;
-        margin-right: auto;
-      }
-      ul {
-        margin-left: auto !important;
-        margin-right: auto;
+        li{
+          margin-bottom: 20px !important;
+        }
       }
     }
   }

@@ -86,11 +86,9 @@ main {
     margin-bottom: 20px;
   }
   .about-container {
-    .about {
-      // max-width: 600px;
-      // width: 40%;
-      // margin: 50px auto;
+    .info-section {
       width: 100vw;
+      margin-top: 100px;
       .header {
         position: relative;
         display: inline-block;
@@ -129,44 +127,6 @@ main {
         width: 50%;
         font-size: 26px;
         list-style-type: none;
-        li {
-          margin-bottom: 10px;
-        }
-      }
-    }
-    .skills {
-      width: 100vw;
-      margin-top: 100px;
-      .header {
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        width: auto;
-        margin-bottom: 25px;
-        margin-left: 15%;
-        h2 {
-          font-size: 78px;
-          display: inline-block;
-        }
-        .underline {
-          height: 2px;
-          background-color: #808080;
-          width: 50%;
-          display: inline-block;
-          position: relative;
-          transition: all 0.25s ease-in-out;
-        }
-        &:hover {
-          .underline {
-            width: 100%;
-          }
-        }
-      }
-      ul {
-        list-style-type: none;
-        margin-left: 30%;
-        width: 50%;
-        font-size: 26px;
         li {
           margin-bottom: 10px;
         }

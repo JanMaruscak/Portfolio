@@ -757,11 +757,12 @@ main h1 {
   margin-bottom: 20px;
 }
 
-main .about-container .about {
+main .about-container .info-section {
   width: 100vw;
+  margin-top: 100px;
 }
 
-main .about-container .about .header {
+main .about-container .info-section .header {
   position: relative;
   display: inline-block;
   text-align: center;
@@ -770,12 +771,12 @@ main .about-container .about .header {
   margin-left: 15%;
 }
 
-main .about-container .about .header h2 {
+main .about-container .info-section .header h2 {
   font-size: 78px;
   display: inline-block;
 }
 
-main .about-container .about .header .underline {
+main .about-container .info-section .header .underline {
   height: 2px;
   background-color: #808080;
   width: 50%;
@@ -785,73 +786,29 @@ main .about-container .about .header .underline {
   transition: all 0.25s ease-in-out;
 }
 
-main .about-container .about .header:hover .underline {
+main .about-container .info-section .header:hover .underline {
   width: 100%;
 }
 
-main .about-container .about .pointer {
+main .about-container .info-section .pointer {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-main .about-container .about .pointer path {
+main .about-container .info-section .pointer path {
   stroke: black;
   stroke-width: 1px;
   fill: none;
 }
 
-main .about-container .about ul {
+main .about-container .info-section ul {
   margin-left: 30%;
   width: 50%;
   font-size: 26px;
   list-style-type: none;
 }
 
-main .about-container .about ul li {
-  margin-bottom: 10px;
-}
-
-main .about-container .skills {
-  width: 100vw;
-  margin-top: 100px;
-}
-
-main .about-container .skills .header {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  width: auto;
-  margin-bottom: 25px;
-  margin-left: 15%;
-}
-
-main .about-container .skills .header h2 {
-  font-size: 78px;
-  display: inline-block;
-}
-
-main .about-container .skills .header .underline {
-  height: 2px;
-  background-color: #808080;
-  width: 50%;
-  display: inline-block;
-  position: relative;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-
-main .about-container .skills .header:hover .underline {
-  width: 100%;
-}
-
-main .about-container .skills ul {
-  list-style-type: none;
-  margin-left: 30%;
-  width: 50%;
-  font-size: 26px;
-}
-
-main .about-container .skills ul li {
+main .about-container .info-section ul li {
   margin-bottom: 10px;
 }
 
@@ -1034,27 +991,20 @@ main .about-container .skills ul li {
     margin-right: 0;
     margin-left: 0;
   }
-  .about-container .about {
+  .about-container .info-section {
     text-align: center;
   }
-  .about-container .about .header {
+  .about-container .info-section .header {
     margin-left: auto !important;
     margin-right: auto;
   }
-  .about-container .about ul {
+  .about-container .info-section ul {
+    text-align: left;
     margin-left: auto !important;
     margin-right: auto;
   }
-  .about-container .skills {
-    text-align: center;
-  }
-  .about-container .skills .header {
-    margin-left: auto !important;
-    margin-right: auto;
-  }
-  .about-container .skills ul {
-    margin-left: auto !important;
-    margin-right: auto;
+  .about-container .info-section ul li {
+    margin-bottom: 20px !important;
   }
   .project-table .project.read-more {
     width: 100%;
