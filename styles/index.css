@@ -936,14 +936,21 @@ main .about-container .info-section ul li {
     position: fixed;
   }
   nav ul {
-    display: none;
-    -webkit-box-orient: horizontal;
+    opacity: 0;
+    height: 0;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     position: absolute;
-    height: calc(100vh - 50px);
+    width: 0;
+    -webkit-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+    z-index: -1;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
   nav ul li {
     margin-left: 0;
@@ -978,6 +985,9 @@ main .about-container .info-section ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    opacity: 1;
+    height: calc(100vh - 50px);
+    width: 100vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -985,6 +995,7 @@ main .about-container .info-section ul li {
     background-color: rgba(47, 53, 66, 0.9);
     margin-top: 50px;
     padding-bottom: 50px;
+    z-index: 1000;
   }
   main .main-name,
   main .main-header {
