@@ -26,7 +26,7 @@ a {
 }
 main {
   min-height: calc(
-    100vh - #{$navHeight} - #{$footerHeight} - #{footerMarginTop}
+    100vh - #{$navHeight} - #{$footerHeight} - #{$footerMarginTop}
   );
   color: $darkBlack;
   .landing {
@@ -43,6 +43,7 @@ main {
     padding: 26px;
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 38px;
     &.animation {
       animation: entrance-name 1s ease-out;
     }
@@ -53,13 +54,14 @@ main {
     margin-left: 300px;
     padding: 26px;
     white-space: nowrap;
+    font-size: 32px;
     &.animation {
       animation: entrance-header 1s ease-out;
     }
     /* animation-delay: 0.25s; */
   }
   .main-portrait {
-    width: 300px;
+    width: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto;

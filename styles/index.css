@@ -235,6 +235,7 @@ footer .link p {
 .project-table .project .container .left p {
   font-size: 16px;
   text-align: left;
+  padding-bottom: 5px;
 }
 
 .project-table .project .container .right {
@@ -675,7 +676,7 @@ a {
 }
 
 main {
-  min-height: calc( 100vh - 50px - 200px - footerMarginTop);
+  min-height: calc( 100vh - 50px - 200px - 100px);
   color: #2f3542;
 }
 
@@ -703,6 +704,7 @@ main .main-name {
   padding: 26px;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 38px;
 }
 
 main .main-name.animation {
@@ -716,6 +718,7 @@ main .main-header {
   margin-left: 300px;
   padding: 26px;
   white-space: nowrap;
+  font-size: 32px;
   /* animation-delay: 0.25s; */
 }
 
@@ -725,7 +728,7 @@ main .main-header.animation {
 }
 
 main .main-portrait {
-  width: 300px;
+  width: 400px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -987,7 +990,7 @@ main .about-container .info-section ul li {
     display: flex;
     opacity: 1;
     height: calc(100vh - 50px);
-    width: 100vw;
+    width: 101vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

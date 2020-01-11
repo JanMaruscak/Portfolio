@@ -52,6 +52,14 @@ function OnScroll() {
 
 function ToggleMobile() {
   document.getElementById("navbarUl").classList.toggle("open");
+  if(document.getElementById("navbarUl").classList.contains("open")){
+    document.body.style.overflowY = "hidden"
+    document.body.style.maxHeight = "100vh"
+  }
+  else{
+    document.body.style.overflowY = "visible"
+    document.body.style.maxHeight = "none"
+  }
 }
 
 // $(document).ready(function () {
