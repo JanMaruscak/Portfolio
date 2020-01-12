@@ -1,18 +1,20 @@
 nav {
   top: 0;
-  transition: background 1s;
+  transition: all 1s;
   position: absolute;
   height: $navHeight;
   width: 100%;
   z-index: 100;
   color: #2f3542;
   ul {
+    transition: all 1s;
     display: flex;
     justify-content: center;
     font-size: 22px;
     li {
       display: block;
-      margin-left: 80px;
+      margin-left: 40px;
+      margin-right: 40px;
       margin-top: 20px;
       transition: all 0.2s ease-in-out;
       &:first-child {
@@ -36,6 +38,51 @@ nav {
     .selected {
       font-weight: bold;
       text-shadow: 0px 0px 10px rgba(150, 150, 150, 0.5);
+    }
+  }
+  #darkModeSlider {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top:50%; 
+    width: 60px;
+    height: 35px;
+    cursor: pointer;
+    background-color: gray;
+    border-radius: 34px;
+    img{
+      pointer-events: none;
+      width: 20px;
+      height: 20px;
+      margin-top: auto;
+      margin-bottom: auto;
+      top: 0;
+      bottom: 0;
+      left: 5px;
+      position: absolute;
+      user-select: none;
+      &.sun{
+        right: 5px;
+        left: initial;
+
+      }
+    }
+    &::before {
+      z-index: 10;
+      background-color: #fff;
+      bottom: 5px;
+      content: "";
+      height: 25px;
+      left: 5px;
+      position: absolute;
+      transition: 0.4s;
+      width: 25px;
+      border-radius: 50%;
+    }
+    &.checked {
+      &::before {
+        transform: translateX(25px);
+      }
     }
   }
   .hamburger-container {
@@ -66,13 +113,17 @@ nav {
   }
 }
 .scrolled {
-    position: fixed;
-    ul {
-      li {
-        margin-top: 0px;
-        a {
-          color: white;
-        }
+  background-color: $darkBlack;
+  position: fixed;
+  ul {
+    li {
+      margin-top: 0px;
+      a {
+        color: white;
       }
     }
   }
+  #darkModeSlider {
+    top: 7.5px;
+  }
+}

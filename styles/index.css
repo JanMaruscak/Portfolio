@@ -1,7 +1,7 @@
 nav {
   top: 0;
-  -webkit-transition: background 1s;
-  transition: background 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   position: absolute;
   height: 50px;
   width: 100%;
@@ -10,6 +10,8 @@ nav {
 }
 
 nav ul {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +23,8 @@ nav ul {
 
 nav ul li {
   display: block;
-  margin-left: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-top: 20px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -51,6 +54,58 @@ nav ul li a {
 nav ul .selected {
   font-weight: bold;
   text-shadow: 0px 0px 10px rgba(150, 150, 150, 0.5);
+}
+
+nav #darkModeSlider {
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 60px;
+  height: 35px;
+  cursor: pointer;
+  background-color: gray;
+  border-radius: 34px;
+}
+
+nav #darkModeSlider img {
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  left: 5px;
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+nav #darkModeSlider img.sun {
+  right: 5px;
+  left: initial;
+}
+
+nav #darkModeSlider::before {
+  z-index: 10;
+  background-color: #fff;
+  bottom: 5px;
+  content: "";
+  height: 25px;
+  left: 5px;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 25px;
+  border-radius: 50%;
+}
+
+nav #darkModeSlider.checked::before {
+  -webkit-transform: translateX(25px);
+          transform: translateX(25px);
 }
 
 nav .hamburger-container {
@@ -89,6 +144,7 @@ nav .mobile {
 }
 
 .scrolled {
+  background-color: #2f3542;
   position: fixed;
 }
 
@@ -98,6 +154,10 @@ nav .mobile {
 
 .scrolled ul li a {
   color: white;
+}
+
+.scrolled #darkModeSlider {
+  top: 7.5px;
 }
 
 footer {
@@ -685,6 +745,7 @@ body.darkMode main #message-form input[type="email"],
 body.darkMode main #message-form textarea {
   background-color: #434954;
   border: #2f3542;
+  color: white;
 }
 
 body.darkMode footer .link a svg {
@@ -975,7 +1036,7 @@ main .about-container .info-section ul li {
 
 @media only screen and (max-width: 1100px) {
   nav {
-    background-color: #20252E;
+    background-color: #20252E !important;
     position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1020,6 +1081,11 @@ main .about-container .info-section ul li {
     color: white;
     width: 30%;
     margin: auto;
+  }
+  nav #darkModeSlider {
+    left: 15px;
+    right: initial;
+    top: 7.5px;
   }
   nav .hamburger-container {
     display: inline-block;

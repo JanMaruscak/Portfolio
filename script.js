@@ -2,7 +2,7 @@ if (
   localStorage.getItem("colorMode") === null ||
   localStorage.getItem("colorMode") === "dark"
 ) {
-  ToggleDarkMode();
+  ToggleDarkMode(document.getElementById("darkModeSlider"));
 }
 
 window.onscroll = function() {
@@ -161,11 +161,12 @@ function ReadMore(el) {
   }
 }
 
-function ToggleDarkMode() {
+function ToggleDarkMode(element) {
   document.body.classList.toggle("darkMode");
+  if (element != null) element.classList.toggle("checked");
   let isDarkMode = document.body.classList.contains("darkMode");
   localStorage.setItem("colorMode", isDarkMode ? "dark" : "light");
-  document.getElementById("darkModeButton").innerHTML = isDarkMode
-    ? "Light Mode"
-    : "Dark Mode";
+  // document.getElementById("darkModeButton").innerHTML = isDarkMode
+  //   ? "Light Mode"
+  //   : "Dark Mode";
 }

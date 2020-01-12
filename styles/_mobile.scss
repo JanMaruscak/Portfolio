@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1100px) {
   nav {
-    background-color: $navDarkBlack;
+    background-color: $navDarkBlack !important;
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -33,6 +33,11 @@
           margin: auto;
         }
       }
+    }
+    #darkModeSlider{
+      left: 15px;
+      right: initial;
+      top: 7.5px;
     }
     .hamburger-container {
       display: inline-block;
