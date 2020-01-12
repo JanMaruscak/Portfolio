@@ -1,0 +1,46 @@
+body {
+  &.darkMode {
+    // background-color: #282c35;
+    background-color: $darkBlack;
+    color: hsla(0, 0%, 100%, 0.8);
+    a {
+      color: white;
+    }
+    nav {
+      ul {
+        &.scrolled-ul {
+            background-color: $navDarkBlack;
+        }
+      }
+    }
+    main {
+      color: hsla(0, 0%, 100%, 0.8);
+      h1,
+      h2,
+      h3 {
+        color: white;
+      }
+      .project {
+        background-color: $darkBlackSecondary;
+      }
+      #message-form {
+        background-color: $darkBlackSecondary;
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          background-color: $darkBlackTertiary;
+          border: $darkBlack;
+        }
+      }
+    }
+    footer {
+      .link {
+        a {
+          svg {
+            fill: $darkBlackTertiary;
+          }
+        }
+      }
+    }
+  }
+}

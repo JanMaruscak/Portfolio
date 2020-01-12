@@ -89,7 +89,6 @@ nav .mobile {
 }
 
 .scrolled {
-  background-color: #2f3542;
   position: fixed;
 }
 
@@ -638,7 +637,6 @@ footer .link p {
 #message-form label {
   letter-spacing: inherit;
   font-size: 1.1em;
-  color: black;
   margin-top: 15px;
   margin-bottom: 2.5px;
   margin-left: auto;
@@ -649,6 +647,48 @@ footer .link p {
 .social {
   margin: auto;
   width: 500px;
+}
+
+body.darkMode {
+  background-color: #2f3542;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body.darkMode a {
+  color: white;
+}
+
+body.darkMode nav ul.scrolled-ul {
+  background-color: #20252E;
+}
+
+body.darkMode main {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body.darkMode main h1,
+body.darkMode main h2,
+body.darkMode main h3 {
+  color: white;
+}
+
+body.darkMode main .project {
+  background-color: #363c48;
+}
+
+body.darkMode main #message-form {
+  background-color: #363c48;
+}
+
+body.darkMode main #message-form input[type="text"],
+body.darkMode main #message-form input[type="email"],
+body.darkMode main #message-form textarea {
+  background-color: #434954;
+  border: #2f3542;
+}
+
+body.darkMode footer .link a svg {
+  fill: #434954;
 }
 
 * {
@@ -714,7 +754,6 @@ main .main-name.animation {
 
 main .main-header {
   text-align: center;
-  font-size: 28px;
   margin-left: 300px;
   padding: 26px;
   white-space: nowrap;
@@ -729,6 +768,7 @@ main .main-header.animation {
 
 main .main-portrait {
   width: 400px;
+  max-width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -935,8 +975,18 @@ main .about-container .info-section ul li {
 
 @media only screen and (max-width: 1100px) {
   nav {
-    background-color: #2f3542;
+    background-color: #20252E;
     position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   nav ul {
     opacity: 0;
@@ -972,13 +1022,9 @@ main .about-container .info-section ul li {
     margin: auto;
   }
   nav .hamburger-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    display: inline-block;
+    margin: auto;
+    width: auto;
     margin-right: 20px;
   }
   nav .mobile {
@@ -1026,6 +1072,12 @@ main .about-container .info-section ul li {
 }
 
 @media only screen and (max-width: 800px) {
+  main .main-name {
+    font-size: 32px;
+  }
+  main .main-header {
+    font-size: 28px;
+  }
   main .project-table {
     width: 100%;
   }

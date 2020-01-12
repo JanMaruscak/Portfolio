@@ -1,3 +1,10 @@
+if (
+  localStorage.getItem("colorMode") === null ||
+  localStorage.getItem("colorMode") === "dark"
+) {
+  ToggleDarkMode();
+}
+
 window.onscroll = function() {
   OnScroll();
 };
@@ -52,13 +59,12 @@ function OnScroll() {
 
 function ToggleMobile() {
   document.getElementById("navbarUl").classList.toggle("open");
-  if(document.getElementById("navbarUl").classList.contains("open")){
-    document.body.style.overflowY = "hidden"
-    document.body.style.maxHeight = "100vh"
-  }
-  else{
-    document.body.style.overflowY = "visible"
-    document.body.style.maxHeight = "none"
+  if (document.getElementById("navbarUl").classList.contains("open")) {
+    document.body.style.overflowY = "hidden";
+    document.body.style.maxHeight = "100vh";
+  } else {
+    document.body.style.overflowY = "visible";
+    document.body.style.maxHeight = "none";
   }
 }
 
@@ -138,18 +144,28 @@ function ReadMore(el) {
   let isReadMore = project.classList.contains("read-more");
   // console.log(projects)
   projects.forEach(element => {
-    if(element.classList !== null){
-      element.classList.remove('read-more')
-      element.querySelectorAll(".read-more-button")[0].innerText = "Read more . . ."
+    if (element.classList !== null) {
+      element.classList.remove("read-more");
+      element.querySelectorAll(".read-more-button")[0].innerText =
+        "Read more . . .";
     }
     // console.log(element)
   });
-  
+
   if (!isReadMore) {
-    el.innerText  = "Read less . . .";
+    el.innerText = "Read less . . .";
     project.classList.add("read-more");
   } else {
-    el.innerText  = "Read more . . .";
+    el.innerText = "Read more . . .";
     project.classList.remove("read-more");
   }
+}
+
+function ToggleDarkMode() {
+  document.body.classList.toggle("darkMode");
+  let isDarkMode = document.body.classList.contains("darkMode");
+  localStorage.setItem("colorMode", isDarkMode ? "dark" : "light");
+  document.getElementById("darkModeButton").innerHTML = isDarkMode
+    ? "Light Mode"
+    : "Dark Mode";
 }

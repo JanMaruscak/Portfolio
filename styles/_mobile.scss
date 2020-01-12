@@ -1,7 +1,11 @@
 @media only screen and (max-width: 1100px) {
   nav {
-    background-color: $darkBlack;
+    background-color: $navDarkBlack;
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     ul {
       opacity: 0;
       height: 0;
@@ -31,9 +35,9 @@
       }
     }
     .hamburger-container {
-      display: flex;
-      height: 100%;
-      justify-content: flex-end;
+      display: inline-block;
+      margin: auto;
+      width: auto;
       margin-right: 20px;
     }
     .mobile {
@@ -85,6 +89,12 @@
 }
 @media only screen and (max-width: 800px) {
   main {
+    .main-name{
+      font-size: 32px;
+    }
+    .main-header{
+      font-size: 28px;
+    }
     .project-table {
       width: 100%;
       .project {
