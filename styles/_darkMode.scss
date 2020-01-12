@@ -2,7 +2,7 @@ body {
   &.darkMode {
     // background-color: #282c35;
     background-color: $darkBlack;
-    color: hsla(0, 0%, 100%, 0.8);
+    color: $darkModeText;
     a {
       color: white;
     }
@@ -14,7 +14,7 @@ body {
       }
     }
     main {
-      color: hsla(0, 0%, 100%, 0.8);
+      color: $darkModeText;
       h1,
       h2,
       h3 {
@@ -30,7 +30,6 @@ body {
         textarea {
           background-color: $darkBlackTertiary;
           border: $darkBlack;
-          color: white;
         }
       }
     }

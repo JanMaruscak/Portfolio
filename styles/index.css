@@ -64,7 +64,7 @@ nav #darkModeSlider {
   width: 60px;
   height: 35px;
   cursor: pointer;
-  background-color: gray;
+  background-color: #434954;
   border-radius: 34px;
 }
 
@@ -745,7 +745,6 @@ body.darkMode main #message-form input[type="email"],
 body.darkMode main #message-form textarea {
   background-color: #434954;
   border: #2f3542;
-  color: white;
 }
 
 body.darkMode footer .link a svg {
