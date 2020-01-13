@@ -90,6 +90,7 @@ nav {
     .hamburger {
       align-self: center;
       div {
+        transition: 0.5s all;
         width: 35px;
         height: 5px;
         margin-bottom: 6px;

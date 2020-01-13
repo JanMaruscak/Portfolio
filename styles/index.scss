@@ -117,12 +117,28 @@ main {
           }
         }
       }
-      .pointer {
-        transition: all 0.2s;
-        path {
-          stroke: black;
-          stroke-width: 1px;
-          fill: none;
+      // .pointer {
+      //   transition: all 0.2s;
+      //   path {
+      //     stroke: black;
+      //     stroke-width: 1px;
+      //     fill: none;
+      //   }
+      // }
+      .panelContainer {
+        display: flex;
+        flex-direction: row;
+        margin-top: 25px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        h3 {
+          font-size: 36px;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        .panel {
+          width: 50%;
         }
       }
       ul {

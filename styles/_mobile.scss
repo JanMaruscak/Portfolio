@@ -26,7 +26,6 @@
         }
         &:first-child {
           margin-right: 0;
-          
         }
         text-align: center;
         a {
@@ -36,7 +35,7 @@
         }
       }
     }
-    #darkModeSlider{
+    #darkModeSlider {
       left: 15px;
       right: initial;
       top: 7.5px;
@@ -54,12 +53,27 @@
       display: flex;
       opacity: 1;
       height: calc(100vh - #{$navHeight});
-      width: 101vw; // because when i hide the scrollbar there is little white bar (idk why)
+      width: 100vw;
       flex-direction: column;
       background-color: rgba($color: $darkBlack, $alpha: 0.9);
       margin-top: $navHeight;
       padding-bottom: $navHeight;
       z-index: 1000;
+      ~.hamburger-container{
+        .hamburger{
+          div{
+            &:first-of-type{
+              transform: translateY(11px) rotate(-45deg);
+            }
+            &:nth-of-type(2){
+              opacity: 0;
+            }
+            &:last-of-type{
+              transform: translateY(-11px) rotate(45deg);
+            }
+          }
+        }
+      }
     }
   }
   main {
@@ -80,7 +94,7 @@
         text-align: left;
         margin-left: auto !important;
         margin-right: auto;
-        li{
+        li {
           margin-bottom: 20px !important;
         }
       }
@@ -90,16 +104,16 @@
     .project {
       &.read-more {
         width: 100%;
-      }      
+      }
     }
   }
 }
 @media only screen and (max-width: 800px) {
   main {
-    .main-name{
+    .main-name {
       font-size: 32px;
     }
-    .main-header{
+    .main-header {
       font-size: 28px;
     }
     .project-table {
@@ -112,7 +126,7 @@
           .left {
             width: 100%;
             height: 25%;
-            h3 {
+            h2 {
               text-align: center;
             }
             p {
@@ -132,7 +146,7 @@
               max-height: 60%;
               max-width: 75%;
             }
-            .helper{
+            .helper {
               display: none;
             }
             .read-more-button {
@@ -145,7 +159,7 @@
               min-width: 200px;
               margin-top: 60px;
             }
-            .repository{
+            .repository {
               position: relative;
               margin-left: auto;
               margin-right: auto;
@@ -155,7 +169,7 @@
               font-size: 20px;
               min-width: 200px;
               margin-top: 10px;
-              text-align:center;
+              text-align: center;
             }
             .tags {
               position: relative;
@@ -168,6 +182,20 @@
         }
         &.read-more {
           height: 800px;
+        }
+      }
+    }
+    .about-container {
+      .info-section {
+        .panelContainer {
+          flex-direction: column;
+          width: 100%;
+          .panel {
+            width: 100%;
+            h3{
+              margin-top: 15px;
+            }
+          }
         }
       }
     }
