@@ -711,7 +711,7 @@ footer .link p {
 
 body.darkMode {
   background-color: #2f3542;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 body.darkMode a {
@@ -723,7 +723,7 @@ body.darkMode nav ul.scrolled-ul {
 }
 
 body.darkMode main {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 body.darkMode main h1,
@@ -893,15 +893,28 @@ main .about-container .info-section .header:hover .underline {
   width: 100%;
 }
 
-main .about-container .info-section .pointer {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+main .about-container .info-section .panelContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 25px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-main .about-container .info-section .pointer path {
-  stroke: black;
-  stroke-width: 1px;
-  fill: none;
+main .about-container .info-section .panelContainer h3 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+main .about-container .info-section .panelContainer .panel {
+  width: 50%;
 }
 
 main .about-container .info-section ul {
@@ -1035,7 +1048,7 @@ main .about-container .info-section ul li {
 
 @media only screen and (max-width: 1100px) {
   nav {
-    background-color: #20252E !important;
+    background-color: #2f3542 !important;
     position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1222,6 +1235,19 @@ main .about-container .info-section ul li {
   }
   main .project-table .project.read-more {
     height: 800px;
+  }
+  main .about-container .info-section .panelContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  main .about-container .info-section .panelContainer .panel {
+    width: 100%;
+  }
+  main .about-container .info-section .panelContainer .panel h3 {
+    margin-top: 15px;
   }
   main #message-form {
     width: 80%;

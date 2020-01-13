@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1100px) {
   nav {
-    background-color: $navDarkBlack !important;
+    background-color: $darkBlack !important;
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -26,7 +26,6 @@
         }
         &:first-child {
           margin-right: 0;
-          
         }
         text-align: center;
         a {
@@ -36,7 +35,7 @@
         }
       }
     }
-    #darkModeSlider{
+    #darkModeSlider {
       left: 15px;
       right: initial;
       top: 7.5px;
@@ -80,7 +79,7 @@
         text-align: left;
         margin-left: auto !important;
         margin-right: auto;
-        li{
+        li {
           margin-bottom: 20px !important;
         }
       }
@@ -90,16 +89,16 @@
     .project {
       &.read-more {
         width: 100%;
-      }      
+      }
     }
   }
 }
 @media only screen and (max-width: 800px) {
   main {
-    .main-name{
+    .main-name {
       font-size: 32px;
     }
-    .main-header{
+    .main-header {
       font-size: 28px;
     }
     .project-table {
@@ -132,7 +131,7 @@
               max-height: 60%;
               max-width: 75%;
             }
-            .helper{
+            .helper {
               display: none;
             }
             .read-more-button {
@@ -145,7 +144,7 @@
               min-width: 200px;
               margin-top: 60px;
             }
-            .repository{
+            .repository {
               position: relative;
               margin-left: auto;
               margin-right: auto;
@@ -155,7 +154,7 @@
               font-size: 20px;
               min-width: 200px;
               margin-top: 10px;
-              text-align:center;
+              text-align: center;
             }
             .tags {
               position: relative;
@@ -168,6 +167,20 @@
         }
         &.read-more {
           height: 800px;
+        }
+      }
+    }
+    .about-container {
+      .info-section {
+        .panelContainer {
+          flex-direction: column;
+          width: 100%;
+          .panel {
+            width: 100%;
+            h3{
+              margin-top: 15px;
+            }
+          }
         }
       }
     }
