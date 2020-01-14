@@ -4,24 +4,30 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
 <url>
   <loc>https://author.learnit.cz/</loc>
-  <lastmod>2019-11-22T23:20:07+00:00</lastmod>
+  <lastmod>2020-01-14T19:12:17+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://author.learnit.cz/index.html</loc>
-  <lastmod>2019-11-22T23:20:07+00:00</lastmod>
+  <lastmod>2020-01-14T19:12:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://author.learnit.cz/pages/projects.html</loc>
-  <lastmod>2019-11-22T23:20:07+00:00</lastmod>
+  <lastmod>2020-01-14T19:12:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://author.learnit.cz/pages/resume.pdf</loc>
+  <lastmod>2020-01-14T19:12:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://author.learnit.cz/pages/contact.html</loc>
-  <lastmod>2019-11-22T23:20:07+00:00</lastmod>
+  <lastmod>2020-01-14T19:12:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
