@@ -323,6 +323,7 @@ footer .copyright {
 
 .project-table .project {
   width: 800px;
+  max-width: 100%;
   height: 250px;
   margin: 20px;
   padding: 20px;
