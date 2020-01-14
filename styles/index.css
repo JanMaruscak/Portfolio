@@ -571,6 +571,22 @@ footer .copyright {
   width: 95%;
 }
 
+#message-form .input input::-webkit-input-placeholder {
+  color: #6d717a;
+}
+
+#message-form .input input:-ms-input-placeholder {
+  color: #6d717a;
+}
+
+#message-form .input input::-ms-input-placeholder {
+  color: #6d717a;
+}
+
+#message-form .input input::placeholder {
+  color: #6d717a;
+}
+
 #message-form .input input:valid {
   color: #27ae60;
 }
@@ -665,6 +681,22 @@ footer .copyright {
   outline: none;
 }
 
+#message-form textarea::-webkit-input-placeholder {
+  color: #6d717a;
+}
+
+#message-form textarea:-ms-input-placeholder {
+  color: #6d717a;
+}
+
+#message-form textarea::-ms-input-placeholder {
+  color: #6d717a;
+}
+
+#message-form textarea::placeholder {
+  color: #6d717a;
+}
+
 #message-form textarea:valid {
   color: #27ae60;
 }
@@ -711,11 +743,6 @@ footer .copyright {
   width: 95%;
 }
 
-.social {
-  margin: auto;
-  width: 500px;
-}
-
 body.darkMode {
   background-color: #2f3542;
   color: rgba(255, 255, 255, 0.9);
@@ -726,7 +753,7 @@ body.darkMode a {
 }
 
 body.darkMode nav ul.scrolled-ul {
-  background-color: #20252E;
+  background-color: #20252e;
 }
 
 body.darkMode main {
@@ -755,7 +782,7 @@ body.darkMode main #message-form textarea {
 }
 
 body.darkMode footer .link a svg {
-  fill: #434954;
+  fill: #6d717a;
 }
 
 * {
@@ -907,6 +934,17 @@ main .about-container .info-section .header:hover .underline {
   width: 100%;
 }
 
+main .about-container .info-section ul {
+  margin-left: 30%;
+  width: 50%;
+  font-size: 26px;
+  list-style-type: none;
+}
+
+main .about-container .info-section ul li {
+  margin-bottom: 10px;
+}
+
 main .about-container .info-section .panelContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -931,15 +969,8 @@ main .about-container .info-section .panelContainer .panel {
   width: 50%;
 }
 
-main .about-container .info-section ul {
-  margin-left: 30%;
-  width: 50%;
-  font-size: 26px;
-  list-style-type: none;
-}
-
-main .about-container .info-section ul li {
-  margin-bottom: 10px;
+main .about-container .info-section .panelContainer .panel ul {
+  width: 60%;
 }
 
 @-webkit-keyframes pulse {
@@ -1062,7 +1093,7 @@ main .about-container .info-section ul li {
 
 @media only screen and (max-width: 1100px) {
   nav {
-    background-color: #20252E !important;
+    background-color: #20252e !important;
     position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;

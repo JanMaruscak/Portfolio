@@ -123,14 +123,15 @@ main {
           }
         }
       }
-      // .pointer {
-      //   transition: all 0.2s;
-      //   path {
-      //     stroke: black;
-      //     stroke-width: 1px;
-      //     fill: none;
-      //   }
-      // }
+      ul {
+        margin-left: 30%;
+        width: 50%;
+        font-size: 26px;
+        list-style-type: none;
+        li {
+          margin-bottom: 10px;
+        }
+      }
       .panelContainer {
         display: flex;
         flex-direction: row;
@@ -145,15 +146,9 @@ main {
         }
         .panel {
           width: 50%;
-        }
-      }
-      ul {
-        margin-left: 30%;
-        width: 50%;
-        font-size: 26px;
-        list-style-type: none;
-        li {
-          margin-bottom: 10px;
+          ul{
+            width: 60%;
+          }
         }
       }
     }
