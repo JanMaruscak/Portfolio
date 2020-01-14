@@ -99,6 +99,12 @@ main {
         width: auto;
         margin-bottom: 25px;
         margin-left: 15%;
+        &.panel {
+          display: table;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
         h2 {
           font-size: 78px;
           display: inline-block;

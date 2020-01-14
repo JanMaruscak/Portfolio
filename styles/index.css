@@ -119,6 +119,8 @@ nav .hamburger-container .hamburger {
 }
 
 nav .hamburger-container .hamburger div {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
   width: 35px;
   height: 5px;
   margin-bottom: 6px;
@@ -285,7 +287,7 @@ footer .link p {
   width: 62.5%;
 }
 
-.project-table .project .container .left h3 {
+.project-table .project .container .left h2 {
   margin-bottom: 10px;
   font-size: 24px;
   text-align: left;
@@ -776,7 +778,7 @@ a {
 }
 
 main {
-  min-height: calc( 100vh - 50px - 200px - 100px);
+  min-height: calc( 100vh - 50px - 200px - 100px);
   color: #2f3542;
 }
 
@@ -872,6 +874,13 @@ main .about-container .info-section .header {
   width: auto;
   margin-bottom: 25px;
   margin-left: 15%;
+}
+
+main .about-container .info-section .header.panel {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main .about-container .info-section .header h2 {
@@ -1048,7 +1057,7 @@ main .about-container .info-section ul li {
 
 @media only screen and (max-width: 1100px) {
   nav {
-    background-color: #2f3542 !important;
+    background-color: #20252E !important;
     position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1115,7 +1124,7 @@ main .about-container .info-section ul li {
     display: flex;
     opacity: 1;
     height: calc(100vh - 50px);
-    width: 101vw;
+    width: 100vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1124,6 +1133,17 @@ main .about-container .info-section ul li {
     margin-top: 50px;
     padding-bottom: 50px;
     z-index: 1000;
+  }
+  nav .open ~ .hamburger-container .hamburger div:first-of-type {
+    -webkit-transform: translateY(11px) rotate(-45deg);
+            transform: translateY(11px) rotate(-45deg);
+  }
+  nav .open ~ .hamburger-container .hamburger div:nth-of-type(2) {
+    opacity: 0;
+  }
+  nav .open ~ .hamburger-container .hamburger div:last-of-type {
+    -webkit-transform: translateY(-11px) rotate(45deg);
+            transform: translateY(-11px) rotate(45deg);
   }
   main .main-name,
   main .main-header {
@@ -1174,7 +1194,7 @@ main .about-container .info-section ul li {
     width: 100%;
     height: 25%;
   }
-  main .project-table .project .container .left h3 {
+  main .project-table .project .container .left h2 {
     text-align: center;
   }
   main .project-table .project .container .left p {
