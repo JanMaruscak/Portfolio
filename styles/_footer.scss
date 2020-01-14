@@ -1,7 +1,7 @@
 footer {
   margin-top: $footerMarginTop;
   height: $footerHeight;
-  h3{
+  h3 {
     font-size: 28px;
     text-align: center;
   }
@@ -67,5 +67,9 @@ footer {
       font-size: 24px;
       display: none;
     }
+  }
+  .copyright {
+    margin-left: 30px;
+    margin-bottom: 20px;
   }
 }

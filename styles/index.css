@@ -234,6 +234,11 @@ footer .link p {
   display: none;
 }
 
+footer .copyright {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
 .project-table {
   width: 90%;
   margin-left: auto;
