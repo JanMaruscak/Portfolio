@@ -27,7 +27,6 @@
       height: 100%;
       position: relative;
       justify-content: space-between;
-      // border: 0.5px solid rgba($color: #000000, $alpha: 0.1);
       .left {
         width: 62.5%;
         h2 {
@@ -43,9 +42,6 @@
       }
       .right {
         width: 37.5%;
-        // display: flex;
-        // align-content: center;
-        // justify-content: center;
         .helper {
           display: inline-block;
           height: 100%;
@@ -55,7 +51,6 @@
           border-radius: 10px;
           box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.5);
           vertical-align: middle;
-          // max-height: 126px;
           max-width: 95%;
           max-height: 95%;
         }
@@ -105,10 +100,7 @@
     }
     &.read-more{
       width: 90%;
-      // height: calc(100% + 100px);
       height: $projectHeight * 2;
-      // height: calc(100% + #{$projectHeight});
-      // position: absolute;
       left: 0;
       z-index: 10;
       margin-left: 0;

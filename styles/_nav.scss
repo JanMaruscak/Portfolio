@@ -5,7 +5,7 @@ nav {
   height: $navHeight;
   width: 100%;
   z-index: 100;
-  color: #2f3542;
+  color: $darkBlack;
   ul {
     transition: all 1s;
     display: flex;
@@ -21,14 +21,11 @@ nav {
         margin-right: 30%;
       }
       &:hover {
-        background-color: rgba($color: #2f3542, $alpha: 0.05);
-        //   font-weight: bold;
-        p {
-          display: block;
-          position: absolute;
-          /* left: 50%;*/
-          transform: translate(-25%, 0);
-        }
+        // animation: hoverJump 1s infinite;
+        animation-name: hoverJump;
+        animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
       }
       a {
         display: block;
@@ -44,13 +41,13 @@ nav {
     display: block;
     position: absolute;
     right: 15px;
-    top:50%; 
+    top: 50%;
     width: 60px;
     height: 35px;
     cursor: pointer;
     background-color: $darkBlackTertiary;
     border-radius: 34px;
-    img{
+    img {
       pointer-events: none;
       width: 20px;
       height: 20px;
@@ -61,10 +58,9 @@ nav {
       left: 5px;
       position: absolute;
       user-select: none;
-      &.sun{
+      &.sun {
         right: 5px;
         left: initial;
-
       }
     }
     &::before {
@@ -114,7 +110,7 @@ nav {
   }
 }
 .scrolled {
-  background-color: $darkBlack;
+  background-color: $navDarkBlack;
   position: fixed;
   ul {
     li {
@@ -126,5 +122,28 @@ nav {
   }
   #darkModeSlider {
     top: 7.5px;
+  }
+}
+@keyframes hoverJump {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-10px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-0.7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
   }
 }

@@ -27,8 +27,6 @@ function loop() {
   scroll(loop);
 }
 
-// loop();
-
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -46,14 +44,11 @@ function isElementInViewport(el) {
 
 function OnScroll() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    // document.getElementById("navbar").className = "scrolled";
     document.getElementById("navbar").classList.add("scrolled");
     document.getElementById("navbarUl").classList.add("scrolled-ul");
   } else {
-    // document.getElementById("navbar").className = "";
     document.getElementById("navbar").classList.remove("scrolled");
     document.getElementById("navbarUl").classList.remove("scrolled-ul");
-    // document.getElementById("navbarUl").className = "";
   }
 }
 
@@ -67,23 +62,6 @@ function ToggleMobile() {
     document.body.style.maxHeight = "none";
   }
 }
-
-// $(document).ready(function () {
-//   var $horizontal = $('.horizontal');
-//   var startPosition = $horizontal.position().left;
-//   var startTop = $horizontal.position().top;
-//   var speed = 200;
-//   $(window).scroll(function () {
-//       var st = $(this).scrollTop();
-//       var newPos = (st * (speed/100)) + startPosition;
-//       var newTop = startTop - st / 2
-//       $horizontal.css({
-//           'left': newPos,
-//           'top': newTop
-//       });
-//   });
-// });
-
 function onReady(callback) {
   var intervalId = window.setInterval(function() {
     if (document.getElementsByTagName("body")[0] !== undefined) {
@@ -97,18 +75,8 @@ function setVisible(selector, visible) {
   document.querySelector(selector).style.display = visible ? "block" : "none";
 }
 
-// onReady(function() {
-//   setVisible('#loading', false);
-//   document.documentElement.style.overflowY = "visible";
-//   document.querySelectorAll('.animate').forEach( el => {
-//     el.classList.add("animation")
-//     el.classList.remove("animate")
-//   });
-//   // document.body.style.overflow = "visible"
-// });
 window.addEventListener("load", function() {
   fadeOutEffect();
-  // document.getElementsByClassName("loader-wrapper")[0].classList.add("hide")
 });
 
 function fadeOutEffect() {
@@ -142,14 +110,12 @@ function ReadMore(el) {
   let project = el.parentElement.parentElement.parentElement;
   let projects = project.parentElement.querySelectorAll(".project.read-more");
   let isReadMore = project.classList.contains("read-more");
-  // console.log(projects)
   projects.forEach(element => {
     if (element.classList !== null) {
       element.classList.remove("read-more");
       element.querySelectorAll(".read-more-button")[0].innerText =
         "Read more . . .";
     }
-    // console.log(element)
   });
 
   if (!isReadMore) {
@@ -166,7 +132,4 @@ function ToggleDarkMode(element) {
   if (element != null) element.classList.toggle("checked");
   let isDarkMode = document.body.classList.contains("darkMode");
   localStorage.setItem("colorMode", isDarkMode ? "dark" : "light");
-  // document.getElementById("darkModeButton").innerHTML = isDarkMode
-  //   ? "Light Mode"
-  //   : "Dark Mode";
 }

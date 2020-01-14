@@ -1,6 +1,5 @@
 body {
   &.darkMode {
-    // background-color: #282c35;
     background-color: $darkBlack;
     color: $darkModeText;
     a {
@@ -9,7 +8,7 @@ body {
     nav {
       ul {
         &.scrolled-ul {
-            background-color: $navDarkBlack;
+          background-color: $navDarkBlack;
         }
       }
     }
