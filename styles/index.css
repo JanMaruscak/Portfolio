@@ -1200,6 +1200,7 @@ main .about-container .info-section .panelContainer .panel p {
     color: white;
     width: 30%;
     margin: auto;
+    display: none;
   }
   nav #darkModeSlider {
     left: 15px;
@@ -1230,6 +1231,9 @@ main .about-container .info-section .panelContainer .panel p {
     margin-top: 50px;
     padding-bottom: 50px;
     z-index: 1000;
+  }
+  nav .open a {
+    display: block;
   }
   nav .open ~ .hamburger-container .hamburger div:first-of-type {
     -webkit-transform: translateY(11px) rotate(-45deg);

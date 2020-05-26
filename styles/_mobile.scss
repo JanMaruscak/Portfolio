@@ -32,6 +32,7 @@
           color: white;
           width: 30%;
           margin: auto;
+          display: none;
         }
       }
     }
@@ -59,6 +60,9 @@
       margin-top: $navHeight;
       padding-bottom: $navHeight;
       z-index: 1000;
+      a{
+        display: block;
+      }
       ~ .hamburger-container {
         .hamburger {
           div {
