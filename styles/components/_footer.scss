@@ -61,6 +61,16 @@ footer {
           }
         }
       }
+      &#instagram {
+        &:hover {
+          svg {
+            fill: #e63d5c;
+          }
+          ~ p {
+            color: #e63d5c;
+          }
+        }
+      }
     }
     p {
       margin-top: 5px;

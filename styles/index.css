@@ -289,6 +289,14 @@ footer .link a#linkedin:hover ~ p {
   color: #0a66c2;
 }
 
+footer .link a#instagram:hover svg {
+  fill: #e63d5c;
+}
+
+footer .link a#instagram:hover ~ p {
+  color: #e63d5c;
+}
+
 footer .link p {
   margin-top: 5px;
   font-size: 24px;
