@@ -23,15 +23,15 @@ nav ul {
 
 nav ul li {
   display: block;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 25px;
+  margin-right: 25px;
   margin-top: 20px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 nav ul li:first-child {
-  margin-right: 30%;
+  margin-right: 25%;
 }
 
 nav ul li:hover {
