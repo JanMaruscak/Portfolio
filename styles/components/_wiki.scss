@@ -1,0 +1,41 @@
+section {
+  background-color: white;
+  margin: auto;
+  width: 80%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  .header {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    flex-direction: column;
+    margin-bottom: 15px;
+    h2 {
+      text-align: center;
+    }
+    .underline {
+      height: 2px;
+      background-color: #808080;
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      transition: all 0.25s ease-in-out;
+    }
+  }
+  ul {
+      text-align: left;
+    margin-left: 20px;
+    li {
+      margin-bottom: 5px;
+      a{
+        text-decoration: underline;
+        &:hover{
+          color: gray;
+
+        }
+      }
+    }
+  }
+}

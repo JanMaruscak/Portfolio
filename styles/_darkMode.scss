@@ -31,6 +31,9 @@ body {
           border: $darkBlack;
         }
       }
+      section{
+        background-color: $darkBlackSecondary;
+      }
     }
     footer {
       .link {

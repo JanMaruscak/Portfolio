@@ -813,6 +813,58 @@ footer .copyright {
   width: 95%;
 }
 
+section {
+  background-color: white;
+  margin: auto;
+  width: 80%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section .header {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 15px;
+}
+
+section .header h2 {
+  text-align: center;
+}
+
+section .header .underline {
+  height: 2px;
+  background-color: #808080;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+section ul {
+  text-align: left;
+  margin-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 5px;
+}
+
+section ul li a {
+  text-decoration: underline;
+}
+
+section ul li a:hover {
+  color: gray;
+}
+
 body.darkMode {
   background-color: #2f3542;
   color: rgba(255, 255, 255, 0.9);
@@ -849,6 +901,10 @@ body.darkMode main #message-form input[type="email"],
 body.darkMode main #message-form textarea {
   background-color: #434954;
   border: #2f3542;
+}
+
+body.darkMode main section {
+  background-color: #363c48;
 }
 
 body.darkMode footer .link a svg {

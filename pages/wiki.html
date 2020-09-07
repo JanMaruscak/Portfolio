@@ -42,10 +42,10 @@
     <nav id="navbar">
       <ul id="navbarUl">
         <li><a href="../index.html">Home</a></li>
-        <li class="selected"><a href="./projects.html">Projects</a></li>
+        <li><a href="./projects.html">Projects</a></li>
         <li><a href="./resume.pdf">Resume</a></li>
-        <li><a href="./contact.html">Contact</a></li>       
-        <li><a href="./wiki.html">Wiki</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li class="selected"><a href="./wiki.html">Wiki</a></li>
       </ul>
       <div id="darkModeSlider" onclick="ToggleDarkMode(this)">
         <img src="../icons/color-mode/moon.png" alt="moon" />
@@ -60,134 +60,30 @@
       </div>
     </nav>
     <main>
-      <h1>My projects</h1>
-      <div class="project-table">
-        <div class="project">
-          <div class="container">
-            <div class="left">
-              <h2>Portfolio website</h2>
-              <p>
-                The website you're currently viewing.
-              </p>
-              <p class="read-more-only">
-                A website coded in basic HTML, Sass and JavaScript. Planning to add more content + some administration and content editation in the future.
-              </p>
-            </div>
-            <div class="right">
-              <span class="helper"></span>
-              <img
-                src="https://i.imgur.com/DHPKD6D.png"
-                alt="portfolio photo"
-              />
-              <button class="read-more-button" onclick="ReadMore(this)">
-                Read more . . .
-              </button>
-              <a
-                href="https://github.com/JanMaruscak/Portfolio"
-                class="repository"
-                >View repository</a
-              >
-              <div class="tags">
-                <p><strong>Tags:</strong> Website, HTML, Sass, JS</p>
-              </div>
-            </div>
-          </div>
+      <h1>Wiki</h1>
+      <section>
+        <div class="header">
+          <h2>Kyberna Links</h2>
+          <span class="underline"></span>
         </div>
-        <div class="project">
-          <div class="container">
-            <div class="left">
-              <h2>YouTube Video Downloader</h2>
-              <p>
-                <strong>C# desktop GUI</strong> interpretation for the
-                youtube-dl CL tool.
-              </p>
-              <p class="read-more-only">
-                This is C# app built with Windows Forms Applications.
-              </p>
-              <p class="read-more-only">
-                I implement Google's YouTube API for C# to view information
-                about the video you are downloading. Then I install and use for
-                the user FFmpeg for converting videos to other formats, etc. and
-                youtube-dl for the downloading. User can choose location,
-                quality and much more.
-              </p>
-            </div>
-            <div class="right">
-              <span class="helper"></span>
-              <img
-                src="https://i.imgur.com/IHRbjr8.png"
-                alt="youtube downloader photo"
-              />
-              <button class="read-more-button" onclick="ReadMore(this)">
-                Read more . . .
-              </button>
-              <a
-                href="https://github.com/JanMaruscak/YouTube-Downloader"
-                class="repository"
-                >View repository</a
-              >
-              <div class="tags">
-                <p><strong>Tags:</strong> Desktop, C#, WFA</p>
-              </div>
-            </div>
-          </div>
+        <ul>
+          <li><a href="https://docs.google.com/document/d/1jrCnJDJhYizqs9OujESN8bEdks1zHFgwyhUYthaDFKc/edit?usp=sharing">Čeština</a></li>
+          <li><a href="https://docs.google.com/document/d/1Fa7B9XthHm2iJkUBKdFzuUJ2JLjiwqUeuUk9be0ivtc/edit?usp=sharing">DIC</a></li>
+        </ul>
+      </section>
+      <section>
+        <div class="header">
+          <h2>Links</h2>
+          <span class="underline"></span>
         </div>
-        <div class="project">
-          <div class="container">
-            <div class="left">
-              <h2>Learn It!</h2>
-              <p>
-                Website with learning resources for students built with
-                <strong>React</strong>.
-              </p>
-              <p class="read-more-only">
-                I use React + few React libraries alongside basic HTML and Sass.
-                I plan to make backend + database for the site, because I feel
-                even though it may not be the greatest idea, it's really good
-                learning project for me.
-              </p>
-            </div>
-            <div class="right">
-              <span class="helper"></span>
-              <img src="https://i.imgur.com/BSZhm91.png" alt="learnit photo" />
-              <button class="read-more-button" onclick="ReadMore(this)">
-                Read more . . .
-              </button>
-              <a
-                href="https://github.com/JanMaruscak/learnit"
-                class="repository"
-                >View repository</a
-              >
-              <div class="tags">
-                <p><strong>Tags:</strong> Web, HTML/CSS, React</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <div class="container">
-            <div class="left">
-              <h2>School schedule editor</h2>
-              <p>
-                <strong>C# desktop GUI</strong> for editing my school's schedule.
-              </p>
-              <p class="read-more-only">
-                Me and my schoolmate Jan Kollar have been working on this as part of our project hours. It is supposed to be upgraded version of current editor. It will take advantage of easy to use UI + drag and dropping. Due to reasons it is not open source, but probably will be when it's done.
-              </p>
-            </div>
-            <div class="right">
-              <span class="helper"></span>
-              <img src="https://i.imgur.com/zLkKgYn.png" alt="school editor photo" />
-              <button class="read-more-button" onclick="ReadMore(this)">
-                Read more . . .
-              </button>
-              <div class="tags">
-                <p><strong>Tags:</strong> Desktop, C#, WFA</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <ul>
+          <li>Penis1</li>
+          <li>Penis1</li>
+          <li>Penis1</li>
+          <li>Penis1</li>
+          <li>Penis1</li>
+        </ul>
+      </section>
     </main>
     <footer>
       <h3>SOCIAL LINKS:</h3>
@@ -216,7 +112,7 @@
         </div>
         <div class="link">
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com"
             id="linkedin"
             aria-label="linkedin link"
           >
@@ -237,7 +133,11 @@
           <p>LinkedIn</p>
         </div>
         <div class="link">
-          <a href="https://twitter.com/jan_maruscak" id="twitter" aria-label="twitter link">
+          <a
+            href="https://twitter.com/jan_maruscak"
+            id="twitter"
+            aria-label="twitter link"
+          >
             <svg
               aria-hidden="true"
               focusable="false"
