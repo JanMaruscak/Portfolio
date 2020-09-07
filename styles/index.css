@@ -817,6 +817,7 @@ section {
   background-color: white;
   margin: auto;
   width: 80%;
+  max-width: 800px;
   padding: 15px 20px;
   margin-bottom: 20px;
   text-align: center;
