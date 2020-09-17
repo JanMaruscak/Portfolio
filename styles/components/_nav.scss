@@ -13,12 +13,12 @@ nav {
     font-size: 22px;
     li {
       display: block;
-      margin-left: 40px;
-      margin-right: 40px;
+      margin-left: 25px;
+      margin-right: 25px;
       margin-top: 20px;
       transition: all 0.2s ease-in-out;
       &:first-child {
-        margin-right: 30%;
+        margin-right: 25%;
       }
       &:hover {
         // animation: hoverJump 1s infinite;

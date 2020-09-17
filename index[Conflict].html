@@ -13,14 +13,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      type="text/css "
-      href="../styles/index.css"
+      type="text/css"
+      href="./styles/index.css"
       media="all"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="../styles/print.css"
+      href="./styles/print.css"
       media="print"
     />
     <link
@@ -29,6 +29,7 @@
     />
     <title>Portfolio</title>
   </head>
+
   <body>
     <div id="loading">
       <p>Loading</p>
@@ -41,15 +42,14 @@
     </div>
     <nav id="navbar">
       <ul id="navbarUl">
-        <li><a href="../index.html">Home</a></li>
-        <li class="selected"><a href="./projects.html">Projects</a></li>
-        <li><a href="./resume.pdf">Resume</a></li>
-        <li><a href="./contact.html">Contact</a></li>       
-        <li><a href="./wiki.html">Wiki</a></li>
+        <li class="selected"><a href="index.html">Home</a></li>
+        <li><a href="./pages/projects.html">Projects</a></li>
+        <li><a href="./pages/resume.pdf">Resume</a></li>
+        <li><a href="./pages/contact.html">Contact</a></li>
       </ul>
       <div id="darkModeSlider" onclick="ToggleDarkMode(this)">
-        <img src="../icons/color-mode/moon.png" alt="moon" />
-        <img src="../icons/color-mode/sun.png" class="sun" alt="sun" />
+        <img src="./icons/color-mode/moon.png" alt="moon" />
+        <img src="./icons/color-mode/sun.png" class="sun" alt="sun" />
       </div>
       <div class="hamburger-container">
         <div class="hamburger" onclick="ToggleMobile()">
@@ -60,133 +60,103 @@
       </div>
     </nav>
     <main>
-      <h1>My projects</h1>
-      <div class="project-table">
-        <div class="project">
-          <div class="container">
-            <div class="left">
-              <h2>Portfolio website</h2>
+      <div class="landing">
+        <h1 class="main-name animate">Jan Maruscak</h1>
+        <img
+          class="main-portrait animate"
+          src="icons/developer.svg"
+          alt="developer icon"
+        />
+        <p class="main-header animate">Software developer</p>
+        <div class="chevron-container">
+          <a href="#about" aria-label="link to about section">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="chevron-down"
+              class="chevron"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="about-container">
+        <section class="info-section" id="about">
+          <div class="header">
+            <h2>About</h2>
+            <span class="underline"></span>
+          </div>
+          <p>
+            I'm a 17 years old developer from Czech Republic who started
+            programming around two years ago.
+          </p>
+          <p>
+            I love to build desktop apps with C# or web apps with JavaScript.
+          </p>
+          <p>
+            I also enjoy learning and coding all kinds of algorithms.
+          </p>          
+          <p>
+            Since the start of quarantine I became a huge fan of Chess. I usually hop on lichess.com or chess.com every day for some puzzles and few rated games. It is slowly becoming the only computer game I play on regular basis and I love it.
+          </p>
+          <p>When I was younger I used to play hockey and football at my local teams but I stopped and now I only play them for fun. I also love skiing and I recently started working out and running.</p>
+          <p>
+            Some of my other hobbies are or watching lots of TV shows, movies and YouTube videos.
+          </p>
+        </section>
+        <section class="info-section">
+          <div class="header">
+            <h2>Skills</h2>
+            <span class="underline"></span>
+          </div>
+          <p>
+            <strong>Languages:</strong> C#, JavaScript, HTML, CSS (Sass), Python
+          </p>
+          <p><strong>Frameworks:</strong> React</p>
+          <p><strong>Tools:</strong> VS Code, Visual Studio, Adobe XD</p>
+          <p><strong>Others:</strong> MongoDB</p>
+        </section>
+        <section class="info-section">
+          <div class="header panel">
+            <h2>Setup</h2>
+            <span class="underline"></span>
+          </div>
+          <div class="panelContainer">
+            <div class="panel">
+              <h3>Software</h3>
               <p>
-                The website you're currently viewing.
+                For operating system I have always used Windows (currently Win
+                10), but currently I'm slowly learning and transitioning towards
+                Linux by dual booting with Ubuntu.
               </p>
-              <p class="read-more-only">
-                A website coded in basic HTML, Sass and JavaScript. Planning to add more content + some administration and content editation in the future.
+              <p>
+                I code mostly in Visual Studio Code, but for C# I usually switch
+                to Visual Studio community.
               </p>
             </div>
-            <div class="right">
-              <span class="helper"></span>
-              <img
-                src="https://i.imgur.com/DHPKD6D.png"
-                alt="portfolio photo"
-              />
-              <button class="read-more-button" onclick="ReadMore(this)">
-                Read more . . .
-              </button>
-              <a
-                href="https://github.com/JanMaruscak/Portfolio"
-                class="repository"
-                >View repository</a
-              >
-              <div class="tags">
-                <p><strong>Tags:</strong> Website, HTML, Sass, JS</p>
-              </div>
+            <div class="panel">
+              <h3>Hardware</h3>
+              <p>
+                I have both desktop PC and notebook. I have previously used my
+                desktop pc mainly for gaming, but now because I'm not playing so
+                much anymore I use it mainly as my home workstation.
+              </p>
+              <p>
+                My notebook is HP Omen 15-ce014nc which is my goto device when
+                I'm in school or somewhere else than home.
+              </p>
             </div>
           </div>
-        </div>
-        <div class="project">
-          <div class="container">
-            <div class="left">
-              <h2>YouTube Video Downloader</h2>
-              <p>
-                <strong>C# desktop GUI</strong> interpretation for the
-                youtube-dl CL tool.
-              </p>
-              <p class="read-more-only">
-                This is C# app built with Windows Forms Applications.
-              </p>
-              <p class="read-more-only">
-                I implement Google's YouTube API for C# to view information
-                about the video you are downloading. Then I install and use for
-                the user FFmpeg for converting videos to other formats, etc. and
-                youtube-dl for the downloading. User can choose location,
-                quality and much more.
-              </p>
-            </div>
-            <div class="right">
-              <span class="helper"></span>
-              <img
-                src="https://i.imgur.com/IHRbjr8.png"
-                alt="youtube downloader photo"
-              />
-              <button class="read-more-button" onclick="ReadMore(this)">
-                Read more . . .
-              </button>
-              <a
-                href="https://github.com/JanMaruscak/YouTube-Downloader"
-                class="repository"
-                >View repository</a
-              >
-              <div class="tags">
-                <p><strong>Tags:</strong> Desktop, C#, WFA</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <div class="container">
-            <div class="left">
-              <h2>Learn It!</h2>
-              <p>
-                Website with learning resources for students built with
-                <strong>React</strong>.
-              </p>
-              <p class="read-more-only">
-                I use React + few React libraries alongside basic HTML and Sass.
-                I plan to make backend + database for the site, because I feel
-                even though it may not be the greatest idea, it's really good
-                learning project for me.
-              </p>
-            </div>
-            <div class="right">
-              <span class="helper"></span>
-              <img src="https://i.imgur.com/BSZhm91.png" alt="learnit photo" />
-              <button class="read-more-button" onclick="ReadMore(this)">
-                Read more . . .
-              </button>
-              <a
-                href="https://github.com/JanMaruscak/learnit"
-                class="repository"
-                >View repository</a
-              >
-              <div class="tags">
-                <p><strong>Tags:</strong> Web, HTML/CSS, React</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <div class="container">
-            <div class="left">
-              <h2>School schedule editor</h2>
-              <p>
-                <strong>C# desktop GUI</strong> for editing my school's schedule.
-              </p>
-              <p class="read-more-only">
-                Me and my schoolmate Jan Kollar have been working on this as part of our project hours. It is supposed to be upgraded version of current editor. It will take advantage of easy to use UI + drag and dropping. Due to reasons it is not open source, but probably will be when it's done.
-              </p>
-            </div>
-            <div class="right">
-              <span class="helper"></span>
-              <img src="https://i.imgur.com/zLkKgYn.png" alt="school editor photo" />
-              <button class="read-more-button" onclick="ReadMore(this)">
-                Read more . . .
-              </button>
-              <div class="tags">
-                <p><strong>Tags:</strong> Desktop, C#, WFA</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </main>
     <footer>
@@ -216,7 +186,7 @@
         </div>
         <div class="link">
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com"
             id="linkedin"
             aria-label="linkedin link"
           >
@@ -237,7 +207,11 @@
           <p>LinkedIn</p>
         </div>
         <div class="link">
-          <a href="https://twitter.com/jan_maruscak" id="twitter" aria-label="twitter link">
+          <a
+            href="https://twitter.com/jan_maruscak"
+            id="twitter"
+            aria-label="twitter link"
+          >
             <svg
               aria-hidden="true"
               focusable="false"
@@ -294,6 +268,6 @@
         &copy; Copyright 2020, Jan Maruscak. All rights reserved.
       </p>
     </footer>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
