@@ -813,7 +813,7 @@ footer .copyright {
   width: 95%;
 }
 
-section {
+.wiki-section {
   background-color: white;
   margin: auto;
   width: 80%;
@@ -823,7 +823,7 @@ section {
   text-align: center;
 }
 
-section .header {
+.wiki-section .header {
   position: relative;
   display: inline-block;
   text-align: center;
@@ -835,11 +835,11 @@ section .header {
   margin-bottom: 15px;
 }
 
-section .header h2 {
+.wiki-section .header h2 {
   text-align: center;
 }
 
-section .header .underline {
+.wiki-section .header .underline {
   height: 2px;
   background-color: #808080;
   width: 100%;
@@ -849,29 +849,29 @@ section .header .underline {
   transition: all 0.25s ease-in-out;
 }
 
-section img {
+.wiki-section img {
   width: 80%;
   margin: 10px;
 }
 
-section h3 {
+.wiki-section h3 {
   margin-bottom: 10px;
 }
 
-section ul {
+.wiki-section ul {
   text-align: left;
   margin-left: 20px;
 }
 
-section ul li {
+.wiki-section ul li {
   margin-bottom: 5px;
 }
 
-section ul li a {
+.wiki-section ul li a {
   text-decoration: underline;
 }
 
-section ul li a:hover {
+.wiki-section ul li a:hover {
   color: gray;
 }
 
@@ -913,7 +913,7 @@ body.darkMode main #message-form textarea {
   border: #2f3542;
 }
 
-body.darkMode main section {
+body.darkMode main .wiki-section {
   background-color: #363c48;
 }
 
