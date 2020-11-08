@@ -875,6 +875,80 @@ footer .copyright {
   color: gray;
 }
 
+.blog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1100px;
+  width: 80%;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blog-container-article {
+  cursor: pointer;
+  margin: 10px;
+  background-color: #363c48;
+  width: 500px;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blog-container-article-left {
+  padding: 25px;
+  width: 50%;
+  white-space: nowrap;
+}
+
+.blog-container-article-left .helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.blog-container-article-left img {
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.blog-container-article-right {
+  width: 50%;
+  padding: 25px;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog-container-article-right h3 {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.blog-container-article-right .date {
+  color: #b2afaf;
+  font-size: 15px;
+}
+
+.blog-container-article-right .perex {
+  color: #dfdfdf;
+  font-size: 15px;
+}
+
 body.darkMode {
   background-color: #2f3542;
   color: rgba(255, 255, 255, 0.9);

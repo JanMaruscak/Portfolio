@@ -5,18 +5,18 @@ if (
   ToggleDarkMode(document.getElementById("darkModeSlider"));
 }
 
-window.onscroll = function() {
+window.onscroll = function () {
   OnScroll();
 };
 var scroll =
   window.requestAnimationFrame ||
-  function(callback) {
+  function (callback) {
     window.setTimeout(callback, 1000 / 60);
   };
 var elementsToShow = document.querySelectorAll(".show-on-scroll");
 
 function loop() {
-  elementsToShow.forEach(function(element) {
+  elementsToShow.forEach(function (element) {
     if (isElementInViewport(element)) {
       element.classList.add("visible");
     } else {
@@ -63,7 +63,7 @@ function ToggleMobile() {
   }
 }
 function onReady(callback) {
-  var intervalId = window.setInterval(function() {
+  var intervalId = window.setInterval(function () {
     if (document.getElementsByTagName("body")[0] !== undefined) {
       window.clearInterval(intervalId);
       callback.call(this);
@@ -74,15 +74,14 @@ function onReady(callback) {
 function setVisible(selector, visible) {
   document.querySelector(selector).style.display = visible ? "block" : "none";
 }
-
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   fadeOutEffect();
 });
 
 function fadeOutEffect() {
   var fadeTarget = document.getElementById("loading");
   var fadeTop = 0;
-  var fadeEffect = setInterval(function() {
+  var fadeEffect = setInterval(function () {
     if (!fadeTarget.style.opacity) {
       fadeTarget.style.opacity = 1;
       fadeTarget.style.top = fadeTop;
@@ -95,7 +94,7 @@ function fadeOutEffect() {
         fadeTarget.style.display = "none";
       }, 600);
       document.documentElement.style.overflowY = "visible";
-      document.querySelectorAll(".animate").forEach(el => {
+      document.querySelectorAll(".animate").forEach((el) => {
         el.classList.add("animation");
         el.classList.remove("animate");
       });
@@ -110,7 +109,7 @@ function ReadMore(el) {
   let project = el.parentElement.parentElement.parentElement;
   let projects = project.parentElement.querySelectorAll(".project.read-more");
   let isReadMore = project.classList.contains("read-more");
-  projects.forEach(element => {
+  projects.forEach((element) => {
     if (element.classList !== null) {
       element.classList.remove("read-more");
       element.querySelectorAll(".read-more-button")[0].innerText =
