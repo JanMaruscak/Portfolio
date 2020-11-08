@@ -6,30 +6,39 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://author.learnit.cz/</loc>
+  <loc>https://janmaruscak.cz/</loc>
   <lastmod>2020-01-14T19:12:17+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://author.learnit.cz/index.html</loc>
+  <loc>https://janmaruscak.cz/index.html</loc>
   <lastmod>2020-01-14T19:12:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://author.learnit.cz/pages/projects.html</loc>
+  <loc>https://janmaruscak.cz/pages/projects.html</loc>
   <lastmod>2020-01-14T19:12:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://author.learnit.cz/pages/resume.pdf</loc>
+  <loc>https://janmaruscak.cz/pages/resume.pdf</loc>
   <lastmod>2020-01-14T19:12:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://author.learnit.cz/pages/contact.html</loc>
+  <loc>https://janmaruscak.cz/pages/contact.html</loc>
   <lastmod>2020-01-14T19:12:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://janmaruscak.cz/pages/wiki.html</loc>
+  <lastmod>2020-01-14T19:12:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://janmaruscak.cz/pages/blog.html</loc>
+  <lastmod>2020-01-14T19:12:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>
