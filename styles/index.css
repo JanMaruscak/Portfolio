@@ -35,14 +35,9 @@ nav ul li:first-child {
 }
 
 nav ul li:hover {
-  -webkit-animation-name: hoverJump;
-          animation-name: hoverJump;
-  -webkit-animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-          animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  text-decoration: underline;
+  -webkit-text-decoration-color: inherit;
+          text-decoration-color: inherit;
 }
 
 nav ul li a {
@@ -956,6 +951,11 @@ body.darkMode {
 
 body.darkMode a {
   color: white;
+}
+
+body.darkMode nav ul li {
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
 }
 
 body.darkMode nav ul.scrolled-ul {

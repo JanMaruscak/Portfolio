@@ -7,6 +7,9 @@ body {
     }
     nav {
       ul {
+        li {
+          text-decoration-color: white;
+        }
         &.scrolled-ul {
           background-color: $navDarkBlack;
         }

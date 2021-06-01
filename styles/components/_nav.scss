@@ -21,11 +21,8 @@ nav {
         margin-right: 25%;
       }
       &:hover {
-        // animation: hoverJump 1s infinite;
-        animation-name: hoverJump;
-        animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
+        text-decoration: underline;
+        text-decoration-color: inherit;
       }
       a {
         display: block;
