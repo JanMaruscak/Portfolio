@@ -81,26 +81,14 @@
     </nav>
     <main>
       <h1>Feel free to contact me!</h1>
-      <form action="#" id="message-form">
+      <form action="mailto:maruscak.honza@gmail.com" id="message-form">
         <h2>Send me a message here!</h2>
-        <label for="name">Name</label>
-        <div class="input">
-          <input
-            type="text"
-            id="name"
-            placeholder="John Anonymous"
-            required
-            minlength="2"
-          />
-          <svg viewBox="0 0 20 20" class="Icon">
-            <path d="M0 0 L10 10 L0 20"></path>
-          </svg>
-        </div>
-        <label for="email">Email</label>
+        <label for="subject">Email</label>
         <div class="input">
           <input
             type="email"
             id="email"
+            name="subject"
             placeholder="john.anonymous@example.com"
             required
             minlength="2"
@@ -109,10 +97,10 @@
             <path d="M0 0 L10 10 L0 20"></path>
           </svg>
         </div>
-        <label for="message">Your message</label>
+        <label for="body">Your message</label>
         <div class="input">
           <textarea
-            name="message"
+            name="body"
             id="message"
             cols="30"
             rows="10"
