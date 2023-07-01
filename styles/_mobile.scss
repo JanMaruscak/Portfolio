@@ -186,6 +186,15 @@
     }
     .about-container {
       .info-section {
+        p{
+          width: 75%;
+          text-align: center;
+        }
+        .header{
+        h2{
+          font-size: 52px;
+        }
+      }
         .panelContainer {
           flex-direction: column;
           width: 100%;
