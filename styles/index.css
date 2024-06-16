@@ -1015,6 +1015,7 @@ main .about-container .info-section .panelContainer .panel .center {
   }
   main .project-table .project .container .left p {
     text-align: center;
+    font-size: 18px;
   }
   main .project-table .project .container .right {
     width: 100%;
@@ -1036,7 +1037,7 @@ main .about-container .info-section .panelContainer .panel .center {
     margin-right: auto;
     height: 50px;
     line-height: 40px;
-    font-size: 16px;
+    font-size: 18px;
     min-width: 200px;
     margin-top: 60px;
   }
@@ -1047,7 +1048,7 @@ main .about-container .info-section .panelContainer .panel .center {
     height: 50px;
     left: 0;
     line-height: 40px;
-    font-size: 16px;
+    font-size: 18px;
     min-width: 200px;
     margin-top: 10px;
     text-align: center;
@@ -1062,23 +1063,39 @@ main .about-container .info-section .panelContainer .panel .center {
   main .project-table .project.read-more {
     height: auto;
   }
+  main .about-container .info-section {
+    margin-top: 50px;
+  }
   main .about-container .info-section p {
     width: 75%;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
+  }
+  main .about-container .info-section .header {
+    margin-bottom: 15px;
   }
   main .about-container .info-section .header h2 {
-    font-size: 48px;
+    font-size: 40px;
   }
   main .about-container .info-section .panelContainer {
+    margin-top: 0;
     flex-direction: column;
     width: 100%;
   }
   main .about-container .info-section .panelContainer .panel {
     width: 100%;
+    margin-bottom: 20px;
+  }
+  main .about-container .info-section .panelContainer .panel p {
+    font-size: 18px;
   }
   main .about-container .info-section .panelContainer .panel h3 {
-    margin-top: 15px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 26px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
   }
   main #message-form {
     width: 80%;
