@@ -1001,6 +1001,7 @@ main .about-container .info-section .panelContainer .panel .center {
   main .project-table .project {
     width: 75%;
     height: auto;
+    transition: none;
   }
   main .project-table .project .container {
     flex-direction: column;
