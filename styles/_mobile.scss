@@ -65,7 +65,7 @@
       height: calc(100vh - #{$navHeight});
       width: 100vw;
       flex-direction: column;
-      background-color: rgba($color: $darkBlack, $alpha: 0.9);
+      background-color: rgba($color: $navDarkBlack, $alpha: 1);
       margin-top: $navHeight;
       padding-bottom: $navHeight;
       z-index: 1000;
@@ -130,13 +130,19 @@
 }
 
 @media only screen and (max-width: 800px) {
+  footer {
+    .copyright {
+      font-size: 14px;
+    }
+  }
+
   main {
     .main-name {
-      font-size: 32px;
+      font-size: 28px;
     }
 
     .main-header {
-      font-size: 28px;
+      font-size: 24px;
     }
 
     .project-table {
@@ -171,8 +177,8 @@
             justify-content: flex-end;
 
             img {
-              max-height: 60%;
-              max-width: 75%;
+              max-height: 65%;
+              max-width: 90%;
             }
 
             .helper {
@@ -185,7 +191,7 @@
               margin-right: auto;
               height: 50px;
               line-height: 40px;
-              font-size: 20px;
+              font-size: 16px;
               min-width: 200px;
               margin-top: 60px;
             }
@@ -197,7 +203,7 @@
               height: 50px;
               left: 0;
               line-height: 40px;
-              font-size: 20px;
+              font-size: 16px;
               min-width: 200px;
               margin-top: 10px;
               text-align: center;
@@ -225,11 +231,12 @@
         p {
           width: 75%;
           text-align: center;
+          font-size: 22px;
         }
 
         .header {
           h2 {
-            font-size: 52px;
+            font-size: 48px;
           }
         }
 

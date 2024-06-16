@@ -26,7 +26,21 @@ function loop() {
 
   scroll(loop);
 }
+var loaded = false;
 
+document.addEventListener("DOMContentLoaded", function () {
+  var loadingElement = document.getElementById("loading");
+  loadingElement.style.display = "none";
+  setTimeout(function () {
+    if (!loaded) {
+      var loadingElement = document.getElementById("loading");
+      if (loadingElement) {
+        loadingElement.style.display = "flex";
+        document.documentElement.style.overflowY = "hidden";
+      }
+    }
+  }, 500);
+});
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -55,11 +69,9 @@ function OnScroll() {
 function ToggleMobile() {
   document.getElementById("navbarUl").classList.toggle("open");
   if (document.getElementById("navbarUl").classList.contains("open")) {
-    //document.body.style.overflowY = "hidden";
-    document.body.style.maxHeight = "100vh";
+    document.documentElement.style.overflowY = "hidden";
   } else {
-    document.body.style.overflowY = "visible";
-    document.body.style.maxHeight = "none";
+    document.documentElement.style.overflowY = "visible";
   }
 }
 function onReady(callback) {
@@ -75,6 +87,7 @@ function setVisible(selector, visible) {
   document.querySelector(selector).style.display = visible ? "block" : "none";
 }
 window.addEventListener("load", function () {
+  loaded = true;
   fadeOutEffect();
 });
 
@@ -84,7 +97,7 @@ function fadeOutEffect() {
   var fadeEffect = setInterval(function () {
     if (!fadeTarget.style.opacity) {
       fadeTarget.style.opacity = 1;
-      fadeTarget.style.top = fadeTop;
+      fadeTarget.style.top = fadeTop + "px"; // Ensure 'px' is added here
     }
     if (fadeTarget.style.opacity > 0) {
       fadeTarget.style.opacity -= 0.035;
@@ -93,18 +106,18 @@ function fadeOutEffect() {
       setInterval(() => {
         fadeTarget.style.display = "none";
       }, 600);
+    } else {
+      clearInterval(fadeEffect);
+      fadeTarget.style.display = "none";
       document.documentElement.style.overflowY = "visible";
-      document.querySelectorAll(".animate").forEach((el) => {
+      document.body.style.overflow = "visible";
+      document.querySelectorAll(".animate").forEach(function (el) {
         el.classList.add("animation");
         el.classList.remove("animate");
       });
-      document.body.style.overflow = "visible";
-    } else {
-      clearInterval(fadeEffect);
     }
   }, 10);
 }
-
 function ReadMore(el) {
   let project = el.parentElement.parentElement.parentElement;
   let projects = project.parentElement.querySelectorAll(".project.read-more");
