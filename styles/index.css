@@ -1000,14 +1000,14 @@ main .about-container .info-section .panelContainer .panel .center {
   }
   main .project-table .project {
     width: 75%;
-    height: 600px;
+    height: auto;
   }
   main .project-table .project .container {
     flex-direction: column;
   }
   main .project-table .project .container .left {
     width: 100%;
-    height: 25%;
+    margin-bottom: 30px;
   }
   main .project-table .project .container .left h2 {
     text-align: center;
@@ -1017,7 +1017,6 @@ main .about-container .info-section .panelContainer .panel .center {
   }
   main .project-table .project .container .right {
     width: 100%;
-    height: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1060,7 +1059,7 @@ main .about-container .info-section .panelContainer .panel .center {
     text-align: center;
   }
   main .project-table .project.read-more {
-    height: 800px;
+    height: auto;
   }
   main .about-container .info-section p {
     width: 75%;
