@@ -35,10 +35,10 @@ function isElementInViewport(el) {
     (rect.bottom >=
       (window.innerHeight || document.documentElement.clientHeight) &&
       rect.top <=
-        (window.innerHeight || document.documentElement.clientHeight)) ||
+      (window.innerHeight || document.documentElement.clientHeight)) ||
     (rect.top >= 0 &&
       rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight))
+      (window.innerHeight || document.documentElement.clientHeight))
   );
 }
 
@@ -55,7 +55,7 @@ function OnScroll() {
 function ToggleMobile() {
   document.getElementById("navbarUl").classList.toggle("open");
   if (document.getElementById("navbarUl").classList.contains("open")) {
-    document.body.style.overflowY = "hidden";
+    //document.body.style.overflowY = "hidden";
     document.body.style.maxHeight = "100vh";
   } else {
     document.body.style.overflowY = "visible";
