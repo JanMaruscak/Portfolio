@@ -754,7 +754,7 @@ main .main-header.animation {
 main .main-portrait {
   width: 400px;
   max-width: 90%;
-  height: auto;
+  height: 216px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -991,6 +991,10 @@ main .about-container .info-section .panelContainer .panel .center {
 @media only screen and (max-width: 800px) {
   footer .copyright {
     font-size: 14px;
+  }
+  main .main-portrait {
+    width: 300px;
+    height: 200px;
   }
   main .main-name {
     font-size: 28px;

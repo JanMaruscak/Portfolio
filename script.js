@@ -1,10 +1,21 @@
+// Color mode
 if (
   localStorage.getItem("colorMode") === null ||
   localStorage.getItem("colorMode") === "dark"
 ) {
   ToggleDarkMode(document.getElementById("darkModeSlider"));
 }
+function ToggleDarkMode(element) {
+  document.body.classList.toggle("darkMode");
+  if (element != null) element.classList.toggle("checked");
+  let isDarkMode = document.body.classList.contains("darkMode");
+  localStorage.setItem("colorMode", isDarkMode ? "dark" : "light");
+}
 
+// ------------------------------------------------------------------ //
+
+
+// Show on scroll
 window.onscroll = function () {
   OnScroll();
 };
@@ -15,32 +26,6 @@ var scroll =
   };
 var elementsToShow = document.querySelectorAll(".show-on-scroll");
 
-function loop() {
-  elementsToShow.forEach(function (element) {
-    if (isElementInViewport(element)) {
-      element.classList.add("visible");
-    } else {
-      element.classList.remove("visible");
-    }
-  });
-
-  scroll(loop);
-}
-var loaded = false;
-
-document.addEventListener("DOMContentLoaded", function () {
-  var loadingElement = document.getElementById("loading");
-  loadingElement.style.display = "none";
-  setTimeout(function () {
-    if (!loaded) {
-      var loadingElement = document.getElementById("loading");
-      if (loadingElement) {
-        loadingElement.style.display = "flex";
-        document.documentElement.style.overflowY = "hidden";
-      }
-    }
-  }, 500);
-});
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -56,6 +41,17 @@ function isElementInViewport(el) {
   );
 }
 
+function loop() {
+  elementsToShow.forEach(function (element) {
+    if (isElementInViewport(element)) {
+      element.classList.add("visible");
+    } else {
+      element.classList.remove("visible");
+    }
+  });
+
+  scroll(loop);
+}
 function OnScroll() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("navbar").classList.add("scrolled");
@@ -65,30 +61,31 @@ function OnScroll() {
     document.getElementById("navbarUl").classList.remove("scrolled-ul");
   }
 }
+// ------------------------------------------------------------------ //
 
-function ToggleMobile() {
-  document.getElementById("navbarUl").classList.toggle("open");
-  if (document.getElementById("navbarUl").classList.contains("open")) {
-    document.documentElement.style.overflowY = "hidden";
-  } else {
-    document.documentElement.style.overflowY = "visible";
-  }
-}
-function onReady(callback) {
-  var intervalId = window.setInterval(function () {
-    if (document.getElementsByTagName("body")[0] !== undefined) {
-      window.clearInterval(intervalId);
-      callback.call(this);
+
+// Loading screen
+var loaded = false;
+document.addEventListener("DOMContentLoaded", function () {
+  var loadingElement = document.getElementById("loading");
+  loadingElement.style.display = "none";
+  document.querySelectorAll(".animate").forEach(function (el) {
+    el.classList.add("animation");
+    el.classList.remove("animate");
+  });
+  setTimeout(function () {
+    if (!loaded) {
+      document.querySelectorAll(".animation").forEach(function (el) {
+        el.classList.add("animate");
+        el.classList.remove("animation");
+      });
+      var loadingElement = document.getElementById("loading");
+      if (loadingElement) {
+        loadingElement.style.display = "flex";
+        document.documentElement.style.overflowY = "hidden";
+      }
     }
-  }, 1000);
-}
-
-function setVisible(selector, visible) {
-  document.querySelector(selector).style.display = visible ? "block" : "none";
-}
-window.addEventListener("load", function () {
-  loaded = true;
-  fadeOutEffect();
+  }, 500);
 });
 
 function fadeOutEffect() {
@@ -97,15 +94,12 @@ function fadeOutEffect() {
   var fadeEffect = setInterval(function () {
     if (!fadeTarget.style.opacity) {
       fadeTarget.style.opacity = 1;
-      fadeTarget.style.top = fadeTop + "px"; // Ensure 'px' is added here
+      fadeTarget.style.top = fadeTop + "px";
     }
     if (fadeTarget.style.opacity > 0) {
       fadeTarget.style.opacity -= 0.035;
       fadeTarget.style.top = fadeTop + "px";
       fadeTop -= 20;
-      setInterval(() => {
-        fadeTarget.style.display = "none";
-      }, 600);
     } else {
       clearInterval(fadeEffect);
       fadeTarget.style.display = "none";
@@ -118,6 +112,25 @@ function fadeOutEffect() {
     }
   }, 10);
 }
+window.addEventListener("load", function () {
+  loaded = true;
+  fadeOutEffect();
+});
+// ------------------------------------------------------------------ //
+
+// Hamburger menu
+function ToggleMobile() {
+  document.getElementById("navbarUl").classList.toggle("open");
+  if (document.getElementById("navbarUl").classList.contains("open")) {
+    document.documentElement.style.overflowY = "hidden";
+  } else {
+    document.documentElement.style.overflowY = "visible";
+  }
+}
+// ------------------------------------------------------------------ //
+
+
+// Read more button
 function ReadMore(el) {
   let project = el.parentElement.parentElement.parentElement;
   let projects = project.parentElement.querySelectorAll(".project.read-more");
@@ -139,9 +152,4 @@ function ReadMore(el) {
   }
 }
 
-function ToggleDarkMode(element) {
-  document.body.classList.toggle("darkMode");
-  if (element != null) element.classList.toggle("checked");
-  let isDarkMode = document.body.classList.contains("darkMode");
-  localStorage.setItem("colorMode", isDarkMode ? "dark" : "light");
-}
+// ------------------------------------------------------------------ //
