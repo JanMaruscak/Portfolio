@@ -969,19 +969,22 @@ main .about-container .info-section .panelContainer .panel .center {
     margin-right: 0;
     margin-left: 0;
   }
-  .about-container .info-section {
+  main .about-container .info-section {
     text-align: center;
   }
-  .about-container .info-section .header {
+  main .about-container .info-section .header {
     margin-left: auto !important;
     margin-right: auto;
   }
-  .about-container .info-section p {
+  main .about-container .info-section .header h2 {
+    font-size: 60px;
+  }
+  main .about-container .info-section p {
     text-align: left;
     margin-left: auto !important;
     margin-right: auto;
   }
-  .project-table .project.read-more {
+  main .project-table .project.read-more {
     width: 100%;
   }
 }
@@ -999,7 +1002,7 @@ main .about-container .info-section .panelContainer .panel .center {
     width: 100%;
   }
   main .project-table .project {
-    width: 75%;
+    width: 80%;
     height: auto;
     transition: none;
   }
@@ -1063,12 +1066,15 @@ main .about-container .info-section .panelContainer .panel .center {
   main .project-table .project.read-more {
     height: auto;
   }
+  main .project-table .project.read-more p {
+    text-align: left !important;
+  }
   main .about-container .info-section {
     margin-top: 50px;
   }
   main .about-container .info-section p {
-    width: 75%;
-    text-align: center;
+    width: 80%;
+    text-align: left;
     font-size: 18px;
   }
   main .about-container .info-section .header {
@@ -1090,11 +1096,11 @@ main .about-container .info-section .panelContainer .panel .center {
     font-size: 18px;
   }
   main .about-container .info-section .panelContainer .panel h3 {
+    margin: auto;
     margin-top: 0px;
     margin-bottom: 5px;
     font-size: 26px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 80%;
     text-align: center;
   }
   main #message-form {
