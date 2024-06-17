@@ -1,3 +1,3 @@
 # Portfolio
 My portfolio.
-Made in pure HTML, Sass and JS.
+Made in pure HTML, SCSS and JS.
